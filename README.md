@@ -7,56 +7,56 @@
 
 # TP's C#! [Windows]
 
-## Comenzando 🚀
+## Starting 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes.._
 
-### Pre-requisitos 📋
+### Pre requirements 📋
 
-_Que cosas necesitas para correr el software y como hacerlo._
-
-```
-Para ejecutar los TP's C#! [Windows], Necesitas Linux (Mentira, Windows!).
-```
-
-### Instalación 🔧
-
-_Tan simple como clonar y correr el programa ^^_
-
-_Además.._
+_What things do you need to run the software and how to do it._
 
 ```
-Podes clonar, descargar como zip o forkearlo!
+To run the TP's C#! [Windows], you'll need Linux (it¿s a joke, Windows!).
 ```
 
-_Para TP's C#! [Windows]!_
+### Installation 🔧
 
-### TP's C# Agregados:! [Al día de hoy]! 🔩
+_As simple as cloning and running the program ^^_
 
-_Actualizacion [Fecha]:_
+_What's more.._
 
 ```
+You can clone, download as zip or forke!
+```
+
+_For the TP's C#! [Windows]!_
+
+### TP's C# Added:! [till' now]! 🔩
+
+_Update [Date]:_
 
 ```
 
-## Construido con Visual Studio Community [2019]🛠️
+```
 
-_Herramientas utilizadas para crear estos proyectos_
+## Built with Visual Studio Community [2019]🛠️
+
+_Tools used to create these projects_
 
 * [Visual Studio Community 2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16) 
-_en su version_:
+_in its version_:
 ```
-[Versión 16.9.2](MS_Framework version: 4.8.03761) - El IDE usado en la version Windows para TP's C#! [Windows]!.
+[Version 16.9.2](MS_Framework version: 4.8.03761) - The IDE used in the Windows version to TP's C#! [Windows]!.
 ```
 
 ## Releases 📌
 
-Podes ver las distintas versiones o releases dando clic en -> [Releases](https://github.com/caidevOficial/tp_laboratorio_2/releases)
+You can see the different versions or releases by clicking on -> [Releases](https://github.com/caidevOficial/tp_laboratorio_2/releases)
 
 
-## Licencia 📄
+## License 📄
 
-Este proyecto está bajo la Licencia [MIT License] - mira el archivo [LICENSE.md](LICENSE) para detalles
+This project is under the License [MIT License] - look at the file [LICENSE.md](LICENSE) for details.
 
 
 ## Technologies used. 📌
