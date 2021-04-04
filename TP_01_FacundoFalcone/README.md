@@ -45,7 +45,7 @@ _Tools used to create these projects_
 * [Visual Studio Community 2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16) 
 _in its version_:
 ```
-[Version 16.9.2](MS_Framework version: 4.8.03761) - The IDE used in the Windows version to TP's C#! [Windows]!.
+[Version 16.9.3](MS_Framework version: 4.8.03761) - The IDE used in the Windows version to TP's C#! [Windows]!.
 ```
 
 ## Releases 📌
