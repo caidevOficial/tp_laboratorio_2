@@ -1,6 +1,6 @@
 <table>
   <tr>
-  <td><a href="https://github.com/caidevOficial/tp_laboratorio_2/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/logo-utn_blanco.png" height="150px" /></td>
+  <td><a href="https://github.com/caidevOficial/tp_laboratorio_2/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/logo-utn_black_white.png?raw=true" height="150px" /></td>
   <td><img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="150px" height="150px" /></td>
   </tr>
 </table></br>
