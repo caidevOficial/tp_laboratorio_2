@@ -1,0 +1,6 @@
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\Entidades\bin\Release\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\Entidades\bin\Release\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\Entidades\obj\Release\Entidades.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\Entidades\obj\Release\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\Entidades\obj\Release\Entidades.pdb

@@ -1,0 +1,13 @@
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\bin\Debug\TP1_FacundoFalcone.exe.config
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\bin\Debug\TP1_FacundoFalcone.exe
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\bin\Debug\TP1_FacundoFalcone.pdb
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\bin\Debug\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\bin\Debug\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP_01_FacundoFalcone.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP_01_FacundoFalcone.FormCalculadora.resources
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP1_FacundoFalcone.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP_01_FacundoFalcone.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP_01_FacundoFalcone.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP_01_FacundoFalcone.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP1_FacundoFalcone.exe
+C:\Users\Facu\Desktop\GitHub\tp_laboratorio_2\TP_01_FacundoFalcone\TP_01_FacundoFalcone\obj\Debug\TP1_FacundoFalcone.pdb
