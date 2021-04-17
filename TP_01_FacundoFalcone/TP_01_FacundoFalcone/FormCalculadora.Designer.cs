@@ -272,7 +272,7 @@ namespace TP_01_FacundoFalcone
             this.lblVersionApp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblVersionApp.Size = new System.Drawing.Size(161, 30);
             this.lblVersionApp.TabIndex = 8;
-            this.lblVersionApp.Text = "Version: 1.5.7.1";
+            this.lblVersionApp.Text = "Version: 2.5.0.2";
             this.lblVersionApp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnPlayPause
