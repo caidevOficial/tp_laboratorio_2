@@ -109,14 +109,10 @@ namespace TP_01_FacundoFalcone
         /// <param name="theNumber2">Second number in string-format to operate.</param>
         /// <param name="theOperator">Operator as a String format to operate.</param>
         /// <returns>The result of the operation between the two numbers.</returns>
-        private double Operar(string theNumber1, string theNumber2, string theOperator)
+        private static double Operar(string theNumber1, string theNumber2, string theOperator)
         {
             Numero num1 = new Numero(theNumber1);
             Numero num2 = new Numero(theNumber2);
-
-            grpConvert.Enabled = true;
-            btnConvertirABinario.Enabled = true;
-            btnConvertirADecimal.Enabled = false;
 
             return Calculadora.Operar(num1, num2, theOperator);
         }
@@ -150,6 +146,9 @@ namespace TP_01_FacundoFalcone
                     {
                         operador = cmbOperador.SelectedItem.ToString();
                     }
+                    grpConvert.Enabled = true;
+                    btnConvertirABinario.Enabled = true;
+                    btnConvertirADecimal.Enabled = false;
                     lblResultado.Text = Operar(txtNumero1.Text.Replace(".", ","), txtNumero2.Text.Replace(".", ","), operador).ToString();
                 }
             }
