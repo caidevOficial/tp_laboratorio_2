@@ -27,10 +27,8 @@ using System;
 using System.Media;
 using System.Windows.Forms;
 
-namespace TP_01_FacundoFalcone
-{
-    public partial class FormCalculadora : Form
-    {
+namespace TP_01_FacundoFalcone {
+    public partial class FormCalculadora : Form {
         private readonly string pathToMusic = Environment.CurrentDirectory;
         private readonly SoundPlayer myPlayer = new SoundPlayer();
         private bool isPlaying = true;
@@ -40,8 +38,7 @@ namespace TP_01_FacundoFalcone
         /// <summary>
         /// Initializes the components.
         /// </summary>
-        public FormCalculadora()
-        {
+        public FormCalculadora() {
             InitializeComponent();
         }
 
@@ -51,8 +48,7 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FormCalculadora_Load(object sender, EventArgs e)
-        {
+        private void FormCalculadora_Load(object sender, EventArgs e) {
             grpConvert.Enabled = false;
             this.Music(myPlayer);
         }
@@ -64,8 +60,7 @@ namespace TP_01_FacundoFalcone
         /// <summary>
         /// Plays an 8-bit audio of Dragon Ball Z in '.wav' format.
         /// </summary>
-        private void Music(SoundPlayer myPlayer)
-        {
+        private void Music(SoundPlayer myPlayer) {
             myPlayer.SoundLocation = this.pathToMusic + "/Media/DBZ.wav";
             myPlayer.PlayLooping();
         }
@@ -75,15 +70,11 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnPlayPause_Click(object sender, EventArgs e)
-        {
-            if (isPlaying)
-            {
+        private void btnPlayPause_Click(object sender, EventArgs e) {
+            if (isPlaying) {
                 myPlayer.Stop();
                 btnPlayPause.ImageIndex = 1; // Play icon.
-            }
-            else
-            {
+            } else {
                 myPlayer.PlayLooping();
                 btnPlayPause.ImageIndex = 0; // Pause icon.
             }
@@ -97,8 +88,7 @@ namespace TP_01_FacundoFalcone
         /// <summary>
         /// Disables the group box of the convert buttons.
         /// </summary>
-        private void BlockConvertButtons()
-        {
+        private void BlockConvertButtons() {
             grpConvert.Enabled = false;
         }
 
@@ -109,8 +99,7 @@ namespace TP_01_FacundoFalcone
         /// <param name="theNumber2">Second number in string-format to operate.</param>
         /// <param name="theOperator">Operator as a String format to operate.</param>
         /// <returns>The result of the operation between the two numbers.</returns>
-        private static double Operar(string theNumber1, string theNumber2, string theOperator)
-        {
+        private static double Operar(string theNumber1, string theNumber2, string theOperator) {
             Numero num1 = new Numero(theNumber1);
             Numero num2 = new Numero(theNumber2);
 
@@ -122,28 +111,18 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnOperar_Click(object sender, EventArgs e)
-        {
+        private void btnOperar_Click(object sender, EventArgs e) {
             string operador;
-            if (String.IsNullOrWhiteSpace(txtNumero1.Text) || String.IsNullOrWhiteSpace(txtNumero2.Text))
-            {
+            if (String.IsNullOrWhiteSpace(txtNumero1.Text) || String.IsNullOrWhiteSpace(txtNumero2.Text)) {
                 MessageBox.Show("You forget at least one number, check please!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (!Double.TryParse(txtNumero1.Text, out double garbageNumber) || !Double.TryParse(txtNumero2.Text, out garbageNumber) || Double.IsNaN(garbageNumber))
-                {
+            } else {
+                if (!Double.TryParse(txtNumero1.Text, out double garbageNumber) || !Double.TryParse(txtNumero2.Text, out garbageNumber) || Double.IsNaN(garbageNumber)) {
                     MessageBox.Show("Invalid Decimal or Integer numbers, check please!", "Error: Numbers", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    if (cmbOperador.SelectedItem == null)
-                    {
+                } else {
+                    if (cmbOperador.SelectedItem == null) {
                         cmbOperador.Text = "+";
                         operador = "+";
-                    }
-                    else
-                    {
+                    } else {
                         operador = cmbOperador.SelectedItem.ToString();
                     }
                     grpConvert.Enabled = true;
@@ -163,18 +142,16 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnConvertirABinario_Click(object sender, EventArgs e)
-        {
+        private void btnConvertirABinario_Click(object sender, EventArgs e) {
             Numero number = new Numero();
-            
+
             bool couldParse = Double.TryParse(lblResultado.Text, out double checkResult);
 
-            if (!couldParse)
-            {
+            if (!couldParse) {
                 MessageBox.Show("I haven't Power to Convert a negative number to a Binary number using Complement A2.\nPlease wait for the next update, assuming there will be.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
+
             }
-            
+
             lblResultado.Text = number.DecimalBinario(lblResultado.Text);
             btnConvertirABinario.Enabled = false;
             btnConvertirADecimal.Enabled = true;
@@ -185,17 +162,13 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnConvertirADecimal_Click(object sender, EventArgs e)
-        {
+        private void btnConvertirADecimal_Click(object sender, EventArgs e) {
             Numero number = new Numero();
             lblResultado.Text = number.BinarioDecimal(lblResultado.Text);
-            if (lblResultado.Text.StartsWith("Valor"))
-            {
+            if (lblResultado.Text.StartsWith("Valor")) {
                 BlockConvertButtons();
                 lblResultado.Text = lblResultado.Text;
-            }
-            else
-            {
+            } else {
                 btnConvertirABinario.Enabled = true;
             }
             btnConvertirADecimal.Enabled = false;
@@ -211,10 +184,8 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+        private void btnCerrar_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                 Dispose();
             }
         }
@@ -224,14 +195,10 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
+        private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e) {
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
                 e.Cancel = true;
-            }
-            else
-            {
+            } else {
                 Dispose();
             }
         }
@@ -243,8 +210,7 @@ namespace TP_01_FacundoFalcone
         /// <summary>
         /// Cleans all the fields of the App.
         /// </summary>
-        private void Limpiar()
-        {
+        private void Limpiar() {
             string empty = "";
             txtNumero1.Text = empty;
             txtNumero2.Text = empty;
@@ -257,8 +223,7 @@ namespace TP_01_FacundoFalcone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
+        private void btnLimpiar_Click(object sender, EventArgs e) {
             Limpiar();
             grpConvert.Enabled = false;
             txtNumero1.Focus();

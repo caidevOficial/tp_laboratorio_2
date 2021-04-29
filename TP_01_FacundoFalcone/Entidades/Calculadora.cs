@@ -24,10 +24,8 @@
 
 using System;
 
-namespace Entidades
-{
-    public static class Calculadora
-    {
+namespace Entidades {
+    public static class Calculadora {
 
         #region Validate
 
@@ -36,10 +34,8 @@ namespace Entidades
         /// </summary>
         /// <param name="operador">Operator to validate if is +,-,* or /.</param>
         /// <returns>Returns the operator if it is correct, otherwise returns the adding operator '+'.</returns>
-        private static string ValidarOperador(char operador)
-        {
-            if (operador == '+' || operador == '-' || operador == '*' || operador == '/')
-            {
+        private static string ValidarOperador(char operador) {
+            if (operador == '+' || operador == '-' || operador == '*' || operador == '/') {
                 return operador.ToString();
             }
 
@@ -57,14 +53,11 @@ namespace Entidades
         /// <param name="numero2">Second Number to operate.</param>
         /// <param name="operador">Operator to do the calculus.</param>
         /// <returns>Returns the result if can do the operation, otherwise returns 0</returns>
-        public static double Operar(Numero numero1, Numero numero2, string operador)
-        {
+        public static double Operar(Numero numero1, Numero numero2, string operador) {
             double resultado = 0;
-            if (Char.TryParse(operador, out char theOperator))
-            {
+            if (Char.TryParse(operador, out char theOperator)) {
                 string correctOperator = ValidarOperador(theOperator);
-                switch (correctOperator)
-                {
+                switch (correctOperator) {
                     case "+":
                         resultado = numero1 + numero2;
                         break;
