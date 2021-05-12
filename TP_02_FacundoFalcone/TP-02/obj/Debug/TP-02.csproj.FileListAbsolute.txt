@@ -21,13 +21,3 @@ D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\obj\Debug\TP-02.csprojRes
 D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-N2\TP-02\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
 D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-N2\TP-02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
 D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-N2\TP-02\TP-02\obj\Debug\TP-02.exe
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\obj\Debug\TP-02.exe
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\bin\Debug\TP-02.exe.config
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\bin\Debug\TP-02.exe
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\bin\Debug\TP-02.pdb
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\bin\Debug\Entidades.dll
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\bin\Debug\Entidades.pdb
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\obj\Debug\TP-02.csproj.CopyComplete
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_02_FacundoFalcone\TP-02\obj\Debug\TP-02.pdb

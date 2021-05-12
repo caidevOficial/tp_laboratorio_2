@@ -63,9 +63,7 @@ namespace Entidades {
         public override sealed string Mostrar() {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("## SUV ##");
             sb.AppendLine(base.Mostrar());
-            sb.AppendLine($"TAMAÑO : {this.Tamanio}");
             sb.AppendLine("---------------------");
 
             return sb.ToString();
