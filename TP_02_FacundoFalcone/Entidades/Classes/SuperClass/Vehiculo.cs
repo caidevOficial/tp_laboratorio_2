@@ -101,10 +101,12 @@ namespace Entidades {
         public static explicit operator string(Vehiculo p) {
             StringBuilder sb = new StringBuilder();
             if (!(p is null)) {
+                sb.AppendLine($"## {p.GetType().Name.ToUpper()} ##");
                 sb.AppendFormat("CHASIS: {0}\r\n", p.chasis);
                 sb.AppendFormat("MARCA : {0}\r\n", p.marca.ToString());
                 sb.AppendFormat("COLOR : {0}\r\n", p.color.ToString());
                 sb.AppendLine("---------------------");
+                sb.AppendFormat("TAMAÑO : {0} ", p.Tamanio);
             }
 
             return sb.ToString();
@@ -131,7 +133,7 @@ namespace Entidades {
         /// <param name="v2">Segundo objeto tipo vehiculo a comparar</param>
         /// <returns>Retorna True si sus chasis NO son iguales, sino false.</returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2) {
-            return !(v1.chasis == v2.chasis);
+            return !(v1 == v2);
         }
 
         #endregion
