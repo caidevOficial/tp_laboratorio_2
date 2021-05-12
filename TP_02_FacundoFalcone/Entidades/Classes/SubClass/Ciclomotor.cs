@@ -63,9 +63,7 @@ namespace Entidades {
         public override string Mostrar() {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("## CICLOMOTOR ##");
             sb.AppendLine(base.Mostrar());
-            sb.AppendLine($"TAMAÑO : {this.Tamanio}\n");
             sb.AppendLine("---------------------");
 
             return sb.ToString();
