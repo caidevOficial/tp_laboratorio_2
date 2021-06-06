@@ -1,0 +1,10 @@
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\bin\Debug\Test.exe.config
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\bin\Debug\Test.exe
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\bin\Debug\Test.pdb
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\bin\Debug\Models.dll
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\bin\Debug\Models.pdb
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\obj\Debug\Test.csprojAssemblyReference.cache
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\obj\Debug\Test.csproj.CopyComplete
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\obj\Debug\Test.exe
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Test\obj\Debug\Test.pdb
