@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9E6B0EA-D83D-4BE6-971C-1915D8D1EE81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FactoryForms</RootNamespace>
+    <AssemblyName>Falcone.Facundo.2D.TPFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoRobot.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FactoryForms.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factory\Advices\frmShutdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Advices\frmShutdown.Designer.cs">
+      <DependentUpon>frmShutdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Advices\frmException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Advices\frmException.Designer.cs">
+      <DependentUpon>frmException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Dashboard\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Dashboard\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Advices\frmBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Advices\frmBuilding.Designer.cs">
+      <DependentUpon>frmBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Lobby\frmLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Lobby\frmLobby.Designer.cs">
+      <DependentUpon>frmLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\MachineRoom\frmMachineRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\MachineRoom\frmMachineRoom.Designer.cs">
+      <DependentUpon>frmMachineRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Manufacture\frmManufacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Manufacture\frmManufacture.Designer.cs">
+      <DependentUpon>frmManufacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Warehouse\frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Warehouse\frmWarehouse.Designer.cs">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Advices\frmISOCertified.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Advices\frmISOCertified.Designer.cs">
+      <DependentUpon>frmISOCertified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Lobby\frmOpening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Lobby\frmOpening.Designer.cs">
+      <DependentUpon>frmOpening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Factory\Advices\frmShutdown.resx">
+      <DependentUpon>frmShutdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Advices\frmException.resx">
+      <DependentUpon>frmException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Dashboard\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Advices\frmBuilding.resx">
+      <DependentUpon>frmBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Lobby\frmLobby.resx">
+      <DependentUpon>frmLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\MachineRoom\frmMachineRoom.resx">
+      <DependentUpon>frmMachineRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Manufacture\frmManufacture.resx">
+      <DependentUpon>frmManufacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Warehouse\frmWarehouse.resx">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Advices\frmISOCertified.resx">
+      <DependentUpon>frmISOCertified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Lobby\frmOpening.resx">
+      <DependentUpon>frmOpening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TP3Final.Models\TP3Final.Models.csproj">
+      <Project>{756079fd-38b1-43d4-a58d-24255f20887a}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogoRobot.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

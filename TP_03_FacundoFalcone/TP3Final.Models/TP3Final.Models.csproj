@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{756079FD-38B1-43D4-A58D-24255F20887A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Models</RootNamespace>
+    <AssemblyName>Models</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Exceptions\InsufficientMaterialsException.cs" />
+    <Compile Include="Classes\Exceptions\NoSoundFoundException.cs" />
+    <Compile Include="Classes\Exceptions\QualityControlFailedException.cs" />
+    <Compile Include="Classes\Interfaces\IBiographyManager.cs" />
+    <Compile Include="Classes\Interfaces\IFilesManager.cs" />
+    <Compile Include="Classes\Interfaces\IInformation.cs" />
+    <Compile Include="Classes\Interfaces\ICloning.cs" />
+    <Compile Include="Classes\Robot.cs" />
+    <Compile Include="Classes\RobotFactory.cs" />
+    <Compile Include="Classes\SubClasses\MaterialBucket.cs" />
+    <Compile Include="Classes\SuperClasses\Product.cs" />
+    <Compile Include="Classes\RobotPiece.cs" />
+    <Compile Include="Enums\EPieceType.cs" />
+    <Compile Include="Enums\EModelName.cs" />
+    <Compile Include="Enums\EMaterial.cs" />
+    <Compile Include="Enums\EOrigin.cs" />
+    <Compile Include="Classes\MyPlayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\FilesManager\SerialManager.cs" />
+    <Compile Include="Classes\FilesManager\TextManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrams.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
