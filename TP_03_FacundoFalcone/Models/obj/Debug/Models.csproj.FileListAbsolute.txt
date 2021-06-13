@@ -3,9 +3,3 @@ E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFin
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Models\obj\Debug\Models.dll
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Falcone.Facundo.2D.TPFinal\Models\obj\Debug\Models.pdb
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Models\bin\Debug\Models.dll
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Models\bin\Debug\Models.pdb
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Models\obj\Debug\Models.dll
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Models\obj\Debug\Models.pdb
-E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\Models\obj\Debug\Models.csprojAssemblyReference.cache
