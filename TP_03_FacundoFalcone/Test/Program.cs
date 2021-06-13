@@ -36,6 +36,7 @@ namespace TestDeConsola {
 
             #region Atributos
 
+            TextManager logger = new TextManager();
             string mainPath = $"{Environment.CurrentDirectory}";
             string logsPath = $"{mainPath}\\Logs";
             string buildHistoryPath = $"{mainPath}\\BuildBinnacle";
@@ -50,7 +51,6 @@ namespace TestDeConsola {
 
             Robot wallE;
             Robot errorException;
-            FileManager fm = new FileManager();
             bool materialSuficiente;
             bool calidadExitosa;
 
@@ -88,8 +88,8 @@ namespace TestDeConsola {
             wallE.LoadBioFile(absBioPath);
             robotBuildDetails = wallE.Information();
             Console.WriteLine(robotBuildDetails);
-            fm.SaveDocument(buildHistoryPath, "Builds.txt", $"{robotBuildDetails}");
-
+            logger.SaveFull(buildHistoryPath, "Builds.txt", $"{robotBuildDetails}");
+            
             #endregion
 
             #region SegundoCasoDeTesteoFallido
@@ -119,11 +119,14 @@ namespace TestDeConsola {
                         Console.WriteLine(errorException.Information());
                     }
                 } else {
-                    throw new InsufficientMaterialsException("Material isuficiente");
+                    throw new InsufficientMaterialsException($"Materiales isuficientes para fabricar el robot.");
                 }
             } catch (Exception im) {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(im.Message);
+                if(logger.SaveExceptionDetail(logsPath, "Exceptions.txt", im)) {
+                    Console.WriteLine("A log file has been created.");
+                }
             }
 
             #endregion
