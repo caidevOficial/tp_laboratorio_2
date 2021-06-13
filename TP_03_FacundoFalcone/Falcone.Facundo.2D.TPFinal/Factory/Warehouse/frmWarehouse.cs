@@ -102,17 +102,22 @@ namespace FactoryForms {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void dgvRobots_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            if (robotsSelected) {
-                rtbInfoRobot.Text = string.Empty;
-                pbImageRobot.Visible = true;
-                pbImageRobot.Image = null;
-                Robot robot = dgvRobots.CurrentRow.DataBoundItem as Robot;
-                MyPlayer.Play($"Create{robot.Model}", false);
-                rtbInfoRobot.Text = robot.Information();
-                pbImageRobot.Image = Image.FromFile($"{systemImagePath}\\{robot.Model}.png");
-            } else {
-                pbImageRobot.Visible = false;
+            try {
+                if (robotsSelected) {
+                    rtbInfoRobot.Text = string.Empty;
+                    pbImageRobot.Visible = true;
+                    pbImageRobot.Image = null;
+                    Robot robot = dgvRobots.CurrentRow.DataBoundItem as Robot;
+                    MyPlayer.Play($"Create{robot.Model}", false);
+                    rtbInfoRobot.Text = robot.Information();
+                    pbImageRobot.Image = Image.FromFile($"{systemImagePath}\\{robot.Model}.png");
+                } else {
+                    pbImageRobot.Visible = false;
+                }
+            } catch (Exception exe) {
+                frmLobby.FormExceptionHandler(exe);
             }
+            
         }
 
         private void UpdateDataGridView<T>(List<T> list) {
