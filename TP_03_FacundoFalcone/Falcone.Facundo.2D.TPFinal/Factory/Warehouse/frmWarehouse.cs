@@ -125,6 +125,11 @@ namespace FactoryForms {
             dgvRobots.DataSource = list;
         }
 
+        private void UpdateDataGridView<T>(List<T> list) {
+            dgvRobots.DataSource = null;
+            dgvRobots.DataSource = list;
+        }
+
         #endregion
 
     }
