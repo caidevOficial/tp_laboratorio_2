@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Exceptions.InsufficientMaterialsException">
+    <Position X="7.5" Y="9.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Exceptions\InsufficientMaterialsException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions.NoSoundFoundException">
+    <Position X="7.5" Y="6.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Exceptions\NoSoundFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions.QualityControlFailedException">
+    <Position X="7.5" Y="8" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Exceptions\QualityControlFailedException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Robot" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="0.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAEACAAAGAgAAACAAAABAAAAEAEAA4CAhAQAgAAAA=</HashCode>
+      <FileName>Classes\Robot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Models.RobotFactory">
+    <Position X="14.25" Y="0.5" Width="14.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAQAFIMCAAQBnAggAFABRigEAgAIAAABoEJRBBA=</HashCode>
+      <FileName>Classes\RobotFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.RobotPiece">
+    <Position X="0.5" Y="4.75" Width="6.75" />
+    <InheritanceLine Type="SuperClasses.Product" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="3.468" />
+        <Point X="2" Y="4.375" />
+        <Point X="3.875" Y="4.375" />
+        <Point X="3.875" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAAAGAAAAAAAAAAAAAAAEAABAAAAAQABBAAAg=</HashCode>
+      <FileName>Classes\RobotPiece.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Materials.MaterialBucket" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAANAAAAACAAACAAAAAAAAAAAAAgAAAAAAAAAAQAiA=</HashCode>
+      <FileName>Classes\SubClasses\MaterialBucket.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperClasses.Product">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAiA=</HashCode>
+      <FileName>Classes\SuperClasses\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.SerialManager&lt;T&gt;">
+    <Position X="0.5" Y="9.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\FilesManager\SerialManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Models.TextManager">
+    <Position X="0.5" Y="11" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\FilesManager\TextManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Interfaces.IBiographyManager">
+    <Position X="28.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Interfaces\IBiographyManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Interfaces.ICloning&lt;T&gt;">
+    <Position X="31.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Interfaces\ICloning.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Interfaces.IInformation">
+    <Position X="28.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Interfaces\IInformation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Interfaces.IFilesManager&lt;T&gt;">
+    <Position X="28.75" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Interfaces\IFilesManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Enums.EMaterial">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAgAAAAAAAAAggAAAAAAEAAAAABAAA=</HashCode>
+      <FileName>Enums\EMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.EMetalType">
+    <Position X="30.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAEAQAAAEAAAAgAAAQAAAAE=</HashCode>
+      <FileName>Enums\EMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.EModelName">
+    <Position X="28.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAACAAAQAAQAAAACAAAAAAQAAAAAgAAABAAAA=</HashCode>
+      <FileName>Enums\EModelName.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.EOrigin">
+    <Position X="32.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAQAAAQAAAAAAAAAABACAAAAAAAAQIAAEAAAA=</HashCode>
+      <FileName>Enums\EOrigin.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.EPieceType">
+    <Position X="30.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAIAAAAAAAAAAAAAAAAAAIEACAAAAAAA=</HashCode>
+      <FileName>Enums\EPieceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
