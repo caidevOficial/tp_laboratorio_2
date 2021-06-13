@@ -1,4 +1,0 @@
-13/6/2021 17:20:54 - System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
-   en FactoryForms.frmWarehouse.dgvRobots_CellContentClick(Object sender, DataGridViewCellEventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\TP3Final.GUI\Factory\Warehouse\frmWarehouse.cs:línea 110
------------------------------
-
