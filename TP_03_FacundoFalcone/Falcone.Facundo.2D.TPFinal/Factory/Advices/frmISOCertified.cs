@@ -33,13 +33,13 @@ namespace FactoryForms {
 
         #region Attributes
 
-        private FileManager fm;
         private Random rd;
-        private readonly string systemImagePath = $"{Environment.CurrentDirectory}\\Images";
-        private string path = $"{Environment.CurrentDirectory}\\Manufacture_Historial";
-        private string filename = "ManufactureBinnacle.txt";
+        private TextManager logger;
         private string productName;
         private string warrantyMessage;
+        private string path = $"{Environment.CurrentDirectory}\\Manufacture_Historial";
+        private readonly string systemImagePath = $"{Environment.CurrentDirectory}\\Images";
+        private readonly string filename = "ManufactureBinnacle.txt";
 
         #endregion
 
@@ -47,7 +47,7 @@ namespace FactoryForms {
 
         public frmISOCertified() {
             InitializeComponent();
-            fm = new FileManager();
+            logger = new TextManager();
         }
 
         public frmISOCertified(string productName) : this() {
@@ -87,7 +87,7 @@ namespace FactoryForms {
             ipbImage.BackgroundImage = Image.FromFile($"{this.systemImagePath}\\{this.productName}.png");
             warrantyMessage = WarrantyMessage();
             rtbWarrantyMessage.Text = warrantyMessage;
-            fm.SaveDocument(path, filename, warrantyMessage);
+            logger.SaveFull(path, filename, warrantyMessage);
         }
 
         #endregion

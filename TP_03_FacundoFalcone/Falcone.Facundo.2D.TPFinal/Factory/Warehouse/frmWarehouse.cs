@@ -79,7 +79,7 @@ namespace FactoryForms {
                 robotsSelected = true;
                 rtbInfoRobot.Visible = robotsSelected;
                 //paso lista ordenada por un valor en concreto
-                dgvRobots.DataSource = RobotFactory.Robots.OrderBy(x => x.SerialNumber).ToList();
+                UpdateDataGridView(RobotFactory.Robots.OrderBy(x => x.SerialNumber).ToList());
                 dgvRobots.Columns[0].HeaderText = "Serial N°";
                 dgvRobots.Columns[3].HeaderText = "For Ride";
                 dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
@@ -87,7 +87,7 @@ namespace FactoryForms {
             } else if (cmbWarehouseShow.SelectedItem.ToString() == "Materials") {
                 robotsSelected = false;
                 // Paso lista como viene
-                dgvRobots.DataSource = RobotFactory.Buckets;
+                UpdateDataGridView(RobotFactory.Buckets);
                 dgvRobots.Columns[0].Visible = false;
                 dgvRobots.Columns[1].HeaderText = "Material";
                 dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Cantidad";
@@ -113,6 +113,11 @@ namespace FactoryForms {
             } else {
                 pbImageRobot.Visible = false;
             }
+        }
+
+        private void UpdateDataGridView<T>(List<T> list) {
+            dgvRobots.DataSource = null;
+            dgvRobots.DataSource = list;
         }
 
         #endregion

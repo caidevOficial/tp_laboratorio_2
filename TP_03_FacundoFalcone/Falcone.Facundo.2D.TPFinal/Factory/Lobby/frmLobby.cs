@@ -23,8 +23,10 @@
  */
 
 using FontAwesome.Sharp;
+using Materials;
 using Models;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -34,23 +36,21 @@ namespace FactoryForms {
 
         #region Attributes
 
-        private IconButton currentBtn;
+        private Form activeForm;
         private Panel leftBorderBtn;
-        private Form activeForm = null;
+        private IconButton currentBtn;
         private static frmException formEx;
         private static frmShutdown formShut;
-        private static FileManager fm;
-        private static readonly string robotPersistence = "robotPersistence.xml";
-        private static readonly string materialsPersistence = "materialsPersistence.xml";
-        private static readonly string exceptionsLogs = "Exceptions.txt";
-        private static readonly string frmMachineRoomSound = "MachineRoomForm";
+        private static SerialManager<List<Robot>> smr;
+        private static SerialManager<List<MaterialBucket>> smb;
         private static readonly string frmDashboardSound = "DashboardForm";
         private static readonly string frmWarehouseSound = "WarehouseForm";
         private static readonly string frmManufactureSound = "ManufactureForm";
+        private static readonly string frmMachineRoomSound = "MachineRoomForm";
+        private static readonly string robotPersistence = "robotPersistence.xml";
+        private static readonly string materialsPersistence = "materialsPersistence.xml";
         private static string systemPath = $"{Environment.CurrentDirectory}";
-        private static string logsPath = $"{systemPath}\\Logs";
         private static string biographyPath = $"{systemPath}\\Bio";
-        private static string fulllogsPath = $"{logsPath}\\{exceptionsLogs}";
         private static string persistencePath = $"{systemPath}\\Persistence";
         private static string fullRpersistencePath = $"{persistencePath}\\{robotPersistence}";
         private static string fullMpersistencePath = $"{persistencePath}\\{materialsPersistence}";
@@ -76,13 +76,15 @@ namespace FactoryForms {
         /// </summary>
         public frmLobby() {
             InitializeComponent();
-            fm = new FileManager();
+            activeForm = null;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 90);
             pnlMenu.Controls.Add(leftBorderBtn);
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
+            smr = new SerialManager<List<Robot>>();
+            smb = new SerialManager<List<MaterialBucket>>();
         }
 
         #endregion
@@ -158,10 +160,10 @@ namespace FactoryForms {
             try {
                 MyPlayer.Play("MainTheme", true);
                 if (File.Exists(fullMpersistencePath)) {
-                    RobotFactory.Buckets = fm.ReadBucketsFile(fullMpersistencePath);
+                    RobotFactory.Buckets = smb.Read(fullMpersistencePath);
                 }
                 if (File.Exists(fullRpersistencePath)) {
-                    RobotFactory.Robots = fm.ReadRobotFile(fullRpersistencePath);
+                    RobotFactory.Robots = smr.Read(fullRpersistencePath);
                     RobotFactory.ChargeBiography(biographyPath);
                 }
             } catch (Exception ex) {

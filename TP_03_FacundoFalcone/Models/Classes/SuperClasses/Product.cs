@@ -47,7 +47,7 @@ namespace SuperClasses {
         /// <param name="id">ID of the entity.</param>
         /// <param name="name">Name of the entity.</param>
         /// <param name="material">Material of the entity.</param>
-        public Product(string name, EMaterial material) {
+        public Product(string name, EMaterial material) : this() {
             this.NameProduct = name;
             this.MaterialProduct = material;
         }
