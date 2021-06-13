@@ -44,9 +44,8 @@
     <Compile Include="Classes\Exceptions\InsufficientMaterialsException.cs" />
     <Compile Include="Classes\Exceptions\NoSoundFoundException.cs" />
     <Compile Include="Classes\Exceptions\QualityControlFailedException.cs" />
-    <Compile Include="Classes\FileManager.cs" />
     <Compile Include="Classes\Interfaces\IBiographyManager.cs" />
-    <Compile Include="Classes\Interfaces\IFileManager.cs" />
+    <Compile Include="Classes\Interfaces\IFilesManager.cs" />
     <Compile Include="Classes\Interfaces\IInformation.cs" />
     <Compile Include="Classes\Interfaces\ICloning.cs" />
     <Compile Include="Classes\Robot.cs" />
@@ -60,6 +59,8 @@
     <Compile Include="Enums\EOrigin.cs" />
     <Compile Include="Classes\MyPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\FilesManager\SerialManager.cs" />
+    <Compile Include="Classes\FilesManager\TextManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams.cd" />

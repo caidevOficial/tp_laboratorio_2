@@ -138,7 +138,6 @@ namespace Models {
             get => this.RobotPieces.Count;
         }
 
-
         /// <summary>
         /// Gets the list of pieces of the robot.
         /// </summary>
@@ -156,7 +155,6 @@ namespace Models {
                 }
             }
         }
-
 
         #endregion
 
@@ -197,12 +195,7 @@ namespace Models {
         /// <param name="listToClone">List to be cloned</param>
         /// <returns>A new list that is a clone of the original list.</returns>
         public List<RobotPiece> CloneList(List<RobotPiece> listToClone) {
-            List<RobotPiece> myNewList = new List<RobotPiece>();
-            foreach (RobotPiece item in listToClone) {
-                myNewList.Add(item);
-            }
-
-            return myNewList;
+            return new List<RobotPiece>(listToClone);
         }
 
         /// <summary>

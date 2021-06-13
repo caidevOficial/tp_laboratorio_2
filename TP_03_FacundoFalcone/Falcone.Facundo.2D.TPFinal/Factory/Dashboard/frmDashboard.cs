@@ -26,6 +26,7 @@ using Materials;
 using Models;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FactoryForms {
@@ -36,7 +37,13 @@ namespace FactoryForms {
         public frmDashboard() {
             InitializeComponent();
             chartMaterialsStock.Visible = false;
+            chartMaterialsStock.BackColor = Color.Transparent;
+            chartMaterialsStock.ChartAreas[0].BackColor = Color.Transparent;
+            chartMaterialsStock.Legends[0].BackColor = Color.Transparent;
             chartRobotStock.Visible = false;
+            chartRobotStock.BackColor = Color.Transparent;
+            chartRobotStock.ChartAreas[0].BackColor = Color.Transparent;
+            chartRobotStock.Legends[0].BackColor = Color.Transparent;
             GetMaterialStock();
             GetRobotStock();
         }

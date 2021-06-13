@@ -31,7 +31,7 @@ namespace FactoryForms {
 
         #region Attributes
 
-        private FileManager fm;
+        private TextManager tm;
         private Exception formEx;
         private string path = $"{Environment.CurrentDirectory}\\Logs";
         private string filename = "Exceptions.txt";
@@ -91,9 +91,9 @@ namespace FactoryForms {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void frmException_Load(object sender, EventArgs e) {
-            fm = new FileManager();
+            tm = new TextManager();
             rtbExceptionMsg.Text = $"Exception:\n{formEx.Message}";
-            fm.SaveExceptionDetail(path, filename, formEx);
+            tm.SaveFull(path, filename, formEx.ToString());
             MyPlayer.Play("ExceptionForm", false);
         }
 

@@ -38,9 +38,9 @@ namespace Models {
         private static readonly string materialsPersistence = "materialsPersistence.xml";
         private static string systemPath = $"{Environment.CurrentDirectory}";
         private static string persistencePath = $"{systemPath}\\Persistence";
-        private static string fullRpersistencePath = $"{persistencePath}\\{robotPersistence}";
-        private static string fullMpersistencePath = $"{persistencePath}\\{materialsPersistence}";
 
+        private static SerialManager<List<MaterialBucket>> sMBucket;
+        private static SerialManager<List<Robot>> sMRobot;
         private static Random rdn;
         private static List<Product> materials;
         private static List<Robot> robotsInFactory;
@@ -56,10 +56,12 @@ namespace Models {
         /// </summary>
         static RobotFactory() {
             rdn = new Random();
-            buckets = new List<MaterialBucket>();
             materials = new List<Product>();
-            robotPieces = new List<RobotPiece>();
             robotsInFactory = new List<Robot>();
+            buckets = new List<MaterialBucket>();
+            robotPieces = new List<RobotPiece>();
+            sMRobot = new SerialManager<List<Robot>>();
+            sMBucket = new SerialManager<List<MaterialBucket>>();
         }
 
         #endregion
@@ -275,15 +277,17 @@ namespace Models {
         }
 
         /// <summary>
-        /// Assigns a serial number to a robot passed by parameters.
+        /// Assigns a serial number between to a robot passed by parameters.
         /// </summary>
+        /// <param name="minNumber">Minimun number of the serial range.</param>
+        /// <param name="maxNumber">Maximun number of the serial range.</param>
         /// <param name="aRobot">Robot to assign a serial number.</param>
         /// <returns>A robot with a new serial number</returns>
-        public static Robot AssignSerialNumber(Robot aRobot) {
-            aRobot.SerialNumber = rdn.Next(100, 80000);
+        public static Robot AssignSerialNumber(int minNumber, int maxNumber, Robot aRobot) {
+            aRobot.SerialNumber = rdn.Next(minNumber, maxNumber);
             foreach (Robot item in robotsInFactory) {
                 if (item.SerialNumber == aRobot.SerialNumber) {
-                    aRobot.SerialNumber = rdn.Next(100, 80000);
+                    aRobot.SerialNumber = rdn.Next(minNumber, maxNumber);
                 }
             }
 
@@ -300,7 +304,7 @@ namespace Models {
         /// <returns></returns>
         public static Robot CreateRobot(EOrigin origin, EModelName modelName, List<RobotPiece> pieces, bool isRidable) {
             Robot myRobot = new Robot(origin, modelName, pieces, isRidable);
-            myRobot = AssignSerialNumber(myRobot);
+            myRobot = AssignSerialNumber(100, 80000, myRobot);
             pieces.Clear();
             return myRobot;
         }
@@ -475,10 +479,12 @@ namespace Models {
                 Directory.CreateDirectory(persistencePath);
             }
             if (Buckets.Count > 0) {
-                FileManager.SaveBucketsFiles(fullMpersistencePath, Buckets);
+                sMBucket.Save(persistencePath, materialsPersistence, Buckets);
+                //FileManager.SaveBucketsFiles(fullMpersistencePath, Buckets);
             }
             if (Robots.Count > 0) {
-                FileManager.SaveRobotFiles(fullRpersistencePath, Robots);
+                sMRobot.Save(persistencePath, robotPersistence, Robots);
+                //FileManager.SaveRobotFiles(fullRpersistencePath, Robots);
             }
         }
 

@@ -26,6 +26,7 @@ using Materials;
 using Models;
 using System;
 using System.Collections;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FactoryForms {
@@ -54,6 +55,9 @@ namespace FactoryForms {
 
         private void frmFactory_Load(object sender, EventArgs e) {
             chartMaterialsStock.Visible = false;
+            chartMaterialsStock.BackColor = Color.Transparent;
+            chartMaterialsStock.ChartAreas[0].BackColor = Color.Transparent;
+            chartMaterialsStock.Legends[0].BackColor = Color.Transparent;
             try {
                 if (RobotFactory.Buckets.Count > 0) {
                     isEnabled = !isEnabled;
@@ -74,6 +78,7 @@ namespace FactoryForms {
         /// </summary>
         private void GetMaterialStock() {
             ArrayList amount = new ArrayList();
+            ArrayList percentage = new ArrayList();
             ArrayList product = new ArrayList();
             if (RobotFactory.Buckets.Count > 0) {
                 chartMaterialsStock.Visible = true;

@@ -35,8 +35,6 @@ namespace FactoryForms {
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartMaterialsStock = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartRobotStock = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblMaterialsStock = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartMaterialsStock)).BeginInit();
@@ -48,8 +46,6 @@ namespace FactoryForms {
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblMaterialsStock);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -61,20 +57,40 @@ namespace FactoryForms {
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.chartMaterialsStock);
             this.panel2.Controls.Add(this.chartRobotStock);
-            this.panel2.Location = new System.Drawing.Point(12, 80);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(705, 322);
+            this.panel2.Size = new System.Drawing.Size(705, 459);
             this.panel2.TabIndex = 18;
             // 
             // chartMaterialsStock
             // 
             this.chartMaterialsStock.BackColor = System.Drawing.Color.Transparent;
             this.chartMaterialsStock.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.WallWidth = 15;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartMaterialsStock";
             this.chartMaterialsStock.ChartAreas.Add(chartArea1);
             this.chartMaterialsStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartMaterialsStock.Dock = System.Windows.Forms.DockStyle.Right;
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.OrangeRed;
+            legend1.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.ThickGradientLine;
+            legend1.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend1.IsTextAutoFit = false;
+            legend1.ItemColumnSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.ThickGradientLine;
+            legend1.ItemColumnSeparatorColor = System.Drawing.Color.White;
             legend1.Name = "Legend1";
+            legend1.Title = "Materials Stock";
+            legend1.TitleBackColor = System.Drawing.Color.Transparent;
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.TitleForeColor = System.Drawing.Color.OrangeRed;
+            legend1.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.ThickGradientLine;
+            legend1.TitleSeparatorColor = System.Drawing.Color.Gold;
             this.chartMaterialsStock.Legends.Add(legend1);
             this.chartMaterialsStock.Location = new System.Drawing.Point(355, 0);
             this.chartMaterialsStock.Name = "chartMaterialsStock";
@@ -87,7 +103,7 @@ namespace FactoryForms {
         System.Drawing.Color.CornflowerBlue,
         System.Drawing.Color.LightSteelBlue};
             this.chartMaterialsStock.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
+            series1.ChartArea = "ChartMaterialsStock";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series1.IsValueShownAsLabel = true;
             series1.IsXValueIndexed = true;
@@ -98,7 +114,7 @@ namespace FactoryForms {
             series1.Name = "Materials Stock";
             series1.YValuesPerPoint = 4;
             this.chartMaterialsStock.Series.Add(series1);
-            this.chartMaterialsStock.Size = new System.Drawing.Size(350, 322);
+            this.chartMaterialsStock.Size = new System.Drawing.Size(350, 459);
             this.chartMaterialsStock.TabIndex = 0;
             this.chartMaterialsStock.Text = "Stock of Materials";
             // 
@@ -106,11 +122,33 @@ namespace FactoryForms {
             // 
             this.chartRobotStock.BackColor = System.Drawing.Color.Transparent;
             this.chartRobotStock.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
+            chartArea2.Area3DStyle.Enable3D = true;
+            chartArea2.Area3DStyle.IsClustered = true;
+            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea2.Area3DStyle.WallWidth = 15;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartRobots";
             this.chartRobotStock.ChartAreas.Add(chartArea2);
             this.chartRobotStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartRobotStock.Dock = System.Windows.Forms.DockStyle.Left;
+            legend2.Alignment = System.Drawing.StringAlignment.Center;
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.ForeColor = System.Drawing.Color.OrangeRed;
+            legend2.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.ThickGradientLine;
+            legend2.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend2.IsTextAutoFit = false;
+            legend2.ItemColumnSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.ThickGradientLine;
+            legend2.ItemColumnSeparatorColor = System.Drawing.Color.White;
             legend2.Name = "Legend1";
+            legend2.Title = "Robot Models";
+            legend2.TitleBackColor = System.Drawing.Color.Transparent;
+            legend2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.TitleForeColor = System.Drawing.Color.OrangeRed;
+            legend2.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.ThickGradientLine;
+            legend2.TitleSeparatorColor = System.Drawing.Color.Gold;
             this.chartRobotStock.Legends.Add(legend2);
             this.chartRobotStock.Location = new System.Drawing.Point(0, 0);
             this.chartRobotStock.Name = "chartRobotStock";
@@ -123,7 +161,7 @@ namespace FactoryForms {
         System.Drawing.Color.CornflowerBlue,
         System.Drawing.Color.LightSteelBlue};
             this.chartRobotStock.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.ChartArea = "ChartArea1";
+            series2.ChartArea = "ChartRobots";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series2.IsValueShownAsLabel = true;
             series2.IsXValueIndexed = true;
@@ -134,33 +172,9 @@ namespace FactoryForms {
             series2.Name = "Materials Stock";
             series2.YValuesPerPoint = 4;
             this.chartRobotStock.Series.Add(series2);
-            this.chartRobotStock.Size = new System.Drawing.Size(350, 322);
+            this.chartRobotStock.Size = new System.Drawing.Size(350, 459);
             this.chartRobotStock.TabIndex = 1;
             this.chartRobotStock.Text = "Stock of Materials";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(68, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Robots Stock";
-            // 
-            // lblMaterialsStock
-            // 
-            this.lblMaterialsStock.AutoSize = true;
-            this.lblMaterialsStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.lblMaterialsStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterialsStock.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblMaterialsStock.Location = new System.Drawing.Point(400, 57);
-            this.lblMaterialsStock.Name = "lblMaterialsStock";
-            this.lblMaterialsStock.Size = new System.Drawing.Size(133, 20);
-            this.lblMaterialsStock.TabIndex = 16;
-            this.lblMaterialsStock.Text = "Materials Stock";
             // 
             // frmDashboard
             // 
@@ -176,7 +190,6 @@ namespace FactoryForms {
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartMaterialsStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRobotStock)).EndInit();
@@ -189,8 +202,6 @@ namespace FactoryForms {
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMaterialsStock;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRobotStock;
-        private System.Windows.Forms.Label lblMaterialsStock;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
     }
 }
