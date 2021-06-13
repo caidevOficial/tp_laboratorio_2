@@ -49,7 +49,7 @@ namespace Materials {
         /// </summary>
         /// <param name="p">Product to add in the bucket.</param>
         /// <param name="amount">Amount of the product inside the bucket.</param>
-        public MaterialBucket(Product p, int amount) {
+        public MaterialBucket(Product p, int amount) : this() {
             this.AmoutProduct = amount;
             this.ProductOfBucket = p;
         }
