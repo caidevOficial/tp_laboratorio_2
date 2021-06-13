@@ -47,7 +47,7 @@ namespace FactoryForms {
             this.btnInitializeFactory.Location = new System.Drawing.Point(2, 107);
             this.btnInitializeFactory.Name = "btnInitializeFactory";
             this.btnInitializeFactory.Size = new System.Drawing.Size(164, 71);
-            this.btnInitializeFactory.TabIndex = 12;
+            this.btnInitializeFactory.TabIndex = 0;
             this.btnInitializeFactory.Text = "Initialize Factory";
             this.btnInitializeFactory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInitializeFactory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -67,7 +67,7 @@ namespace FactoryForms {
             this.btnImportStock.Location = new System.Drawing.Point(2, 201);
             this.btnImportStock.Name = "btnImportStock";
             this.btnImportStock.Size = new System.Drawing.Size(164, 71);
-            this.btnImportStock.TabIndex = 14;
+            this.btnImportStock.TabIndex = 1;
             this.btnImportStock.Text = "Import Stock";
             this.btnImportStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImportStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

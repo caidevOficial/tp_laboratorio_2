@@ -117,12 +117,7 @@ namespace FactoryForms {
             } catch (Exception exe) {
                 frmLobby.FormExceptionHandler(exe);
             }
-            
-        }
 
-        private void UpdateDataGridView<T>(List<T> list) {
-            dgvRobots.DataSource = null;
-            dgvRobots.DataSource = list;
         }
 
         private void UpdateDataGridView<T>(List<T> list) {

@@ -390,6 +390,7 @@ namespace FactoryForms {
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLobby";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Factory Lobby";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLobby_FormClosing);
             this.Load += new System.EventHandler(this.frmLobby_Load);
             this.pnlTitleBar.ResumeLayout(false);
