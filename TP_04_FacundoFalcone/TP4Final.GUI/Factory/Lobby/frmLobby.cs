@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+using DAO;
 using FontAwesome.Sharp;
 using Materials;
 using Models;
@@ -167,6 +168,7 @@ namespace FactoryForms {
                 }
                 if (File.Exists(fullRpersistencePath)) {
                     RobotFactory.Robots = smr.Read(fullRpersistencePath);
+                    //RobotFactory.Robots = DatabaseManager.GetRobots();
                     RobotFactory.ChargeBiography(biographyPath);
                 }
             } catch (Exception ex) {

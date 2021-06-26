@@ -90,7 +90,8 @@ namespace FactoryForms {
                 UpdateDataGridView(RobotFactory.Buckets);
                 dgvRobots.Columns[0].Visible = false;
                 dgvRobots.Columns[1].HeaderText = "Material";
-                dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Cantidad";
+                dgvRobots.Columns[2].HeaderText = "Cantidad";
+                dgvRobots.Columns[3].Visible = false;
                 rtbInfoRobot.Visible = false;
             }
             dgvRobots.AutoResizeColumns();

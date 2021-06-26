@@ -266,7 +266,7 @@ namespace Models {
         /// <param name="amountTail">Amount of tails of the robot.</param>
         /// <param name="isRidable">boolean state that indicates if the robot is rideable or not.</param>
         /// <returns>The robot with its pieces builded.</returns>
-        public static Robot CreateMultiplePiecesAmdAddToStock(EMetalType metalType, EOrigin origin, EModelName modelName, int amountOfMaterials, int amountHead, int amounTorso, int amountArms, int amountLegs, int amountTail, bool isRidable) {
+        public static Robot CreateMultiplePiecesAndAddToStock(EMetalType metalType, EOrigin origin, EModelName modelName, int amountOfMaterials, int amountHead, int amounTorso, int amountArms, int amountLegs, int amountTail, bool isRidable) {
             RobotFactory.CreatePieceAndAddToStock(amountHead, amountOfMaterials, EPieceType.Head, metalType);
             RobotFactory.CreatePieceAndAddToStock(amounTorso, amountOfMaterials, EPieceType.Torso, metalType);
             RobotFactory.CreatePieceAndAddToStock(amountArms, amountOfMaterials, EPieceType.UpperLimb, metalType);
@@ -479,12 +479,12 @@ namespace Models {
                 if (!Directory.Exists(persistencePath)) {
                     Directory.CreateDirectory(persistencePath);
                 }
-                if (Buckets.Count > 0) {
+                if (CountBuckets() > 0) {
                     sMBucket.Save(persistencePath, materialsPersistence, Buckets);
                 }
-                if (Robots.Count > 0) {
-                    sMRobot.Save(persistencePath, robotPersistence, Robots);
-                }
+                //if (Robots.Count > 0) {
+                //    sMRobot.Save(persistencePath, robotPersistence, Robots);
+                //}
             }
         }
 

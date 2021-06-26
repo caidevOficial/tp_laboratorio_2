@@ -55,6 +55,23 @@ namespace FactoryForms {
         #region AuxiliarMethods
 
         /// <summary>
+        /// Plays a sound and shows the building form.
+        /// </summary>
+        private void ShowFormBuildingWithSound() {
+            MyPlayer.Play($"BuildingForm", false);
+            frmLobby.FormShowDialogHandler(new frmBuilding());
+        }
+
+        /// <summary>
+        /// Plays a sound and shows the ISO Warranty form.
+        /// </summary>
+        /// <param name="prototype">Robot to extract its data.</param>
+        private void ShowFormISOWithSound(Robot prototype) {
+            MyPlayer.Play($"Create{prototype.Model}", false);
+            frmLobby.FormShowDialogHandler(new frmISOCertified(prototype.Model.ToString()));
+        }
+
+        /// <summary>
         /// Creates multiples pieces of the robot.
         /// </summary>
         /// <param name="metalType">Type Of metal of the robot.</param>
@@ -75,20 +92,18 @@ namespace FactoryForms {
             if (RobotFactory.CheckAmountOfMaterialsInBuckets(totalMaterialsForEachPiece)) {
 
                 Robot prototype;
-                prototype = RobotFactory.CreateMultiplePiecesAmdAddToStock(metalType, origin, modelName, amountOfMaterials, amountHead, amounTorso, amountArms, amountLegs, amountTail, isRidable);
+                prototype = RobotFactory.CreateMultiplePiecesAndAddToStock(metalType, origin, modelName, amountOfMaterials, amountHead, amounTorso, amountArms, amountLegs, amountTail, isRidable);
                 filename = prototype.Model.ToString();
                 absBioPath = $"{pathBiography}{filename}.bin";
                 prototype.LoadBioFile(absBioPath);
                 try {
                     if (RobotFactory.QualityControl(prototype, amountPieces)) {
                         if (RobotFactory.AddRobotToWarehouse(prototype)) {
-                            MyPlayer.Play($"BuildingForm", false);
-                            frmLobby.FormShowDialogHandler(new frmBuilding());
+                            ShowFormBuildingWithSound();
                             RobotFactory.SaveDataOfFactory();
-                            MyPlayer.Play($"Create{prototype.Model}", false);
                             prototype.SetSerialNumber(prototype);
                             DatabaseManager.InsertRobot(prototype);
-                            frmLobby.FormShowDialogHandler(new frmISOCertified(prototype.Model.ToString()));
+                            ShowFormISOWithSound(prototype);
                         }
                     } else {
                         if (RobotFactory.DissasembleRobot(prototype)) {

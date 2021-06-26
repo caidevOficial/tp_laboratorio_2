@@ -69,7 +69,7 @@ namespace DAO {
         /// Gets the list of robots.
         /// </summary>
         /// <returns>The list of all the robots in the warehouse.m</returns>
-        public static List<Robot> GetRobots() {
+        public static List<Robot> GetRobots() { //TODO: Fix This
             List<Robot> robots = new List<Robot>();
             List<RobotPiece> pieces;
             Robot actualRobot;
@@ -82,6 +82,7 @@ namespace DAO {
                 actualRobot = new Robot((EOrigin)myReader["Origin"], (EModelName)myReader["ModelName"], pieces, Convert.ToBoolean(myReader["IsRideable"]));
                 robots.Add(actualRobot);
             }
+            myCommand.Parameters.Clear();
             myReader.Close();
             myConnection.Close();
 
@@ -99,7 +100,7 @@ namespace DAO {
             RobotPiece actualPiece;
             myCommand.CommandText = "Select * from RobotPieces WHERE AssociatedRobot_serial = @id_robot";
             myCommand.Parameters.AddWithValue("@id_robot", idRobot);
-            myConnection.Open();
+            //myConnection.Open();
             SqlDataReader myReader = myCommand.ExecuteReader();
             while (myReader.Read()) {
                 materialsOfPiece = GetMaterialsOfPiece(idRobot);
@@ -107,8 +108,9 @@ namespace DAO {
                 actualPiece.AssociatedRobotSerial = Convert.ToInt32(myReader["AssociatedRobot_serial"]);
                 pieces.Add(actualPiece);
             }
+            myCommand.Parameters.Clear();
             myReader.Close();
-            myConnection.Close();
+            //myConnection.Close();
 
             return pieces;
         }
@@ -123,15 +125,16 @@ namespace DAO {
             MaterialBucket actualBucket;
             myCommand.CommandText = "Select * from MaterialBuckets WHERE AssociatedRobot_Serial = @id_robot";
             myCommand.Parameters.AddWithValue("@id_robot", idRobot);
-            myConnection.Open();
+            //myConnection.Open();
             SqlDataReader myReader = myCommand.ExecuteReader();
             while (myReader.Read()) {
                 actualBucket = new MaterialBucket(new Product(myReader["Material_Name"].ToString(), (EMaterial)myReader["Material_Name"]), Convert.ToInt32(myReader["Material_Amount"]));
                 actualBucket.AssociatedRobotSerial = Convert.ToInt32(myReader["AssociatedRobot_Serial"]);
                 materialsOfPiece.Add(actualBucket);
             }
+            myCommand.Parameters.Clear();
             myReader.Close();
-            myConnection.Close();
+            //myConnection.Close();
 
             return materialsOfPiece;
         }
