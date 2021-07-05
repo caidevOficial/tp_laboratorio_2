@@ -76,10 +76,12 @@ namespace DAO {
             myCommand.CommandText = "Select * from Robots";
             myConnection.Open();
             SqlDataReader myReader = myCommand.ExecuteReader();
-            while (myReader.Read()) {
-                int robotSerial = Convert.ToInt32(myReader["SerialNumber"]);
+            DataTable myDT = new DataTable();
+            myDT.Load(myReader);
+            foreach (DataRow item in myDT.Rows) {
+                int robotSerial = Convert.ToInt32(item["SerialNumber"]);
                 pieces = GetPieces(robotSerial);
-                actualRobot = new Robot((EOrigin)myReader["Origin"], (EModelName)myReader["ModelName"], pieces, Convert.ToBoolean(myReader["IsRideable"]));
+                actualRobot = new Robot((EOrigin)item["Origin"], (EModelName)item["ModelName"], pieces, Convert.ToBoolean(item["IsRideable"]));
                 robots.Add(actualRobot);
             }
             myCommand.Parameters.Clear();
@@ -98,18 +100,25 @@ namespace DAO {
             List<RobotPiece> pieces = new List<RobotPiece>();
             List<MaterialBucket> materialsOfPiece;
             RobotPiece actualPiece;
-            myCommand.CommandText = "Select * from RobotPieces WHERE AssociatedRobot_serial = @id_robot";
-            myCommand.Parameters.AddWithValue("@id_robot", idRobot);
+            myCommand.CommandText = "Select * from RobotPieces WHERE AssociatedRobot_serial = @serial_robot";
+            myCommand.Parameters.AddWithValue("@serial_robot", idRobot);
             //myConnection.Open();
             SqlDataReader myReader = myCommand.ExecuteReader();
-            while (myReader.Read()) {
-                materialsOfPiece = GetMaterialsOfPiece(idRobot);
-                actualPiece = new RobotPiece((EPieceType)myReader["PieceType"], (EMetalType)myReader["MetalType"], (EMaterial)myReader["Material"], materialsOfPiece);
-                actualPiece.AssociatedRobotSerial = Convert.ToInt32(myReader["AssociatedRobot_serial"]);
+            DataTable myDT = new DataTable();
+            myDT.Load(myReader);
+            foreach (DataRow item in myDT.Rows) {
+                int idPiece = Convert.ToInt32(item["AssociatedPiece_id"]);
+                materialsOfPiece = GetMaterialsOfPiece(idPiece);
+                Enum.TryParse(item["PieceType"].ToString(), out EPieceType pieceType);
+                Enum.TryParse(item["MetalType"].ToString(), out EMetalType metalType);
+                Enum.TryParse(item["Material"].ToString(), out EMaterial eMaterial);
+                actualPiece = new RobotPiece(pieceType, metalType, eMaterial, materialsOfPiece);
+                actualPiece.AssociatedRobotSerial = Convert.ToInt32(item["AssociatedRobot_serial"]);
+                actualPiece.PieceID = item["id"].ToString();
                 pieces.Add(actualPiece);
             }
             myCommand.Parameters.Clear();
-            myReader.Close();
+            //myReader.Close();
             //myConnection.Close();
 
             return pieces;
@@ -120,20 +129,26 @@ namespace DAO {
         /// </summary>
         /// <param name="idRobot">Serial number of the robot.</param>
         /// <returns>The List of Materials.</returns>
-        private static List<MaterialBucket> GetMaterialsOfPiece(int idRobot) {
+        private static List<MaterialBucket> GetMaterialsOfPiece(int idPiece) {
             List<MaterialBucket> materialsOfPiece = new List<MaterialBucket>();
+            Product myProduct;
             MaterialBucket actualBucket;
-            myCommand.CommandText = "Select * from MaterialBuckets WHERE AssociatedRobot_Serial = @id_robot";
-            myCommand.Parameters.AddWithValue("@id_robot", idRobot);
+            myCommand.CommandText = "Select * from MaterialBuckets WHERE AssociatedPieces_id = @id_piece";
+            myCommand.Parameters.AddWithValue("@id_piece", idPiece);
             //myConnection.Open();
             SqlDataReader myReader = myCommand.ExecuteReader();
-            while (myReader.Read()) {
-                actualBucket = new MaterialBucket(new Product(myReader["Material_Name"].ToString(), (EMaterial)myReader["Material_Name"]), Convert.ToInt32(myReader["Material_Amount"]));
-                actualBucket.AssociatedRobotSerial = Convert.ToInt32(myReader["AssociatedRobot_Serial"]);
+            DataTable myDT = new DataTable();
+            myDT.Load(myReader);
+            foreach (DataRow item in myDT.Rows) {
+                Enum.TryParse(item["Material_Name"].ToString(), out EMaterial mat);
+                myProduct = new Product(item["Material_Name"].ToString(), mat);
+                actualBucket = new MaterialBucket(myProduct, Convert.ToInt32(item["Material_Amount"]));
+                actualBucket.AssociatedRobotSerial = Convert.ToInt32(item["AssociatedRobot_Serial"]);
+                actualBucket.AssociatedPieceID = item["AssociatedPiece_id"].ToString();
                 materialsOfPiece.Add(actualBucket);
             }
             myCommand.Parameters.Clear();
-            myReader.Close();
+            //myReader.Close();
             //myConnection.Close();
 
             return materialsOfPiece;
@@ -171,7 +186,8 @@ namespace DAO {
         private static void InsertPieces(List<RobotPiece> pieces) {
             try {
                 foreach (RobotPiece item in pieces) {
-                    myCommand.CommandText = $"INSERT INTO RobotPieces Values(@PieceType, @MetalType, @Material, @PieceRobotSerialNumber);";
+                    myCommand.CommandText = $"INSERT INTO RobotPieces Values(@id, @PieceType, @MetalType, @Material, @PieceRobotSerialNumber);";
+                    myCommand.Parameters.AddWithValue("@id", item.PieceID);
                     myCommand.Parameters.AddWithValue("@PieceType", item.PieceType.ToString());
                     myCommand.Parameters.AddWithValue("@MetalType", item.MetalType.ToString());
                     myCommand.Parameters.AddWithValue("@Material", item.MaterialProduct.ToString());
@@ -193,9 +209,10 @@ namespace DAO {
         private static void InsertMaterialsPieces(List<MaterialBucket> materials) {
             try {
                 foreach (MaterialBucket item in materials) {
-                    myCommand.CommandText = $"INSERT INTO MaterialBuckets Values(@Material_Name, @Material_Amount, @MaterialRobotSerialNumber);";
+                    myCommand.CommandText = $"INSERT INTO MaterialBuckets Values(@Material_Name, @Material_Amount, @MaterialRobotPieceNumber, @MaterialRobotSerialNumber);";
                     myCommand.Parameters.AddWithValue("@Material_Name", item.NameProductOfBucket);
                     myCommand.Parameters.AddWithValue("@Material_Amount", item.AmoutProduct);
+                    myCommand.Parameters.AddWithValue("@MaterialRobotPieceNumber", item.AssociatedPieceID);
                     myCommand.Parameters.AddWithValue("@MaterialRobotSerialNumber", item.AssociatedRobotSerial);
                     int rows = myCommand.ExecuteNonQuery();
                     myCommand.Parameters.Clear();
@@ -209,5 +226,6 @@ namespace DAO {
         #endregion
 
         #endregion
+
     }
 }

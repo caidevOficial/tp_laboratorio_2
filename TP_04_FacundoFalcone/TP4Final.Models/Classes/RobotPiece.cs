@@ -34,6 +34,7 @@ namespace Models {
 
         #region Attributes
 
+        private string pieceID;
         private int associatedRobotSerial;
         private EMetalType metalType;
         private EPieceType pieceType;
@@ -77,6 +78,18 @@ namespace Models {
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Gets/Sets: The ID number of the robot piece.
+        /// </summary>
+        public string PieceID {
+            get => this.pieceID;
+            set {
+                if (!string.IsNullOrWhiteSpace(value)) {
+                    this.pieceID = value;
+                }
+            }
+        }
 
         /// <summary>
         /// Gets/Sets: The serial number of the robot piece.

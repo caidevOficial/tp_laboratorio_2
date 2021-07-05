@@ -58,7 +58,8 @@ namespace FactoryForms {
         /// Plays a sound and shows the building form.
         /// </summary>
         private void ShowFormBuildingWithSound() {
-            MyPlayer.Play($"BuildingForm", false);
+            MyPlayer player = new MyPlayer();
+            player.Play($"BuildingForm", false);
             frmLobby.FormShowDialogHandler(new frmBuilding());
         }
 
@@ -67,7 +68,8 @@ namespace FactoryForms {
         /// </summary>
         /// <param name="prototype">Robot to extract its data.</param>
         private void ShowFormISOWithSound(Robot prototype) {
-            MyPlayer.Play($"Create{prototype.Model}", false);
+            MyPlayer player = new MyPlayer();
+            player.Play($"Create{prototype.Model}", false);
             frmLobby.FormShowDialogHandler(new frmISOCertified(prototype.Model.ToString()));
         }
 
@@ -101,8 +103,8 @@ namespace FactoryForms {
                         if (RobotFactory.AddRobotToWarehouse(prototype)) {
                             ShowFormBuildingWithSound();
                             RobotFactory.SaveDataOfFactory();
-                            prototype.SetSerialNumber(prototype);
-                            DatabaseManager.InsertRobot(prototype);
+                            prototype.SetSerialNumber();
+                            DataAccessManager.InsertRobot(prototype);
                             ShowFormISOWithSound(prototype);
                         }
                     } else {

@@ -50,47 +50,41 @@ namespace FactoryForms {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOpening));
             this.pnlMainImage = new System.Windows.Forms.Panel();
-            this.ipbMainImage = new FontAwesome.Sharp.IconPictureBox();
+            this.pbBackImage = new System.Windows.Forms.PictureBox();
             this.pnlProgressBar = new System.Windows.Forms.Panel();
             this.pbProgress = new System.Windows.Forms.ProgressBar();
             this.lblMessage = new System.Windows.Forms.Label();
             this.timeFadeIn = new System.Windows.Forms.Timer(this.components);
             this.timeFadeOut = new System.Windows.Forms.Timer(this.components);
             this.pnlMainImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ipbMainImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackImage)).BeginInit();
             this.pnlProgressBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMainImage
             // 
-            this.pnlMainImage.Controls.Add(this.ipbMainImage);
+            this.pnlMainImage.Controls.Add(this.pbBackImage);
             this.pnlMainImage.Location = new System.Drawing.Point(7, 12);
             this.pnlMainImage.Name = "pnlMainImage";
-            this.pnlMainImage.Size = new System.Drawing.Size(553, 339);
+            this.pnlMainImage.Size = new System.Drawing.Size(553, 493);
             this.pnlMainImage.TabIndex = 0;
             // 
-            // ipbMainImage
+            // pbBackImage
             // 
-            this.ipbMainImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.ipbMainImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ipbMainImage.BackgroundImage")));
-            this.ipbMainImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ipbMainImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ipbMainImage.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ipbMainImage.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ipbMainImage.IconColor = System.Drawing.SystemColors.ControlText;
-            this.ipbMainImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ipbMainImage.IconSize = 339;
-            this.ipbMainImage.Location = new System.Drawing.Point(0, 0);
-            this.ipbMainImage.Name = "ipbMainImage";
-            this.ipbMainImage.Size = new System.Drawing.Size(553, 339);
-            this.ipbMainImage.TabIndex = 0;
-            this.ipbMainImage.TabStop = false;
+            this.pbBackImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbBackImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbBackImage.Image = global::FactoryForms.Properties.Resources.Logo_Robot_Head;
+            this.pbBackImage.Location = new System.Drawing.Point(0, 0);
+            this.pbBackImage.Name = "pbBackImage";
+            this.pbBackImage.Size = new System.Drawing.Size(553, 493);
+            this.pbBackImage.TabIndex = 0;
+            this.pbBackImage.TabStop = false;
             // 
             // pnlProgressBar
             // 
             this.pnlProgressBar.Controls.Add(this.pbProgress);
             this.pnlProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlProgressBar.Location = new System.Drawing.Point(0, 391);
+            this.pnlProgressBar.Location = new System.Drawing.Point(0, 531);
             this.pnlProgressBar.Name = "pnlProgressBar";
             this.pnlProgressBar.Size = new System.Drawing.Size(569, 44);
             this.pnlProgressBar.TabIndex = 1;
@@ -109,7 +103,7 @@ namespace FactoryForms {
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.White;
-            this.lblMessage.Location = new System.Drawing.Point(10, 362);
+            this.lblMessage.Location = new System.Drawing.Point(12, 508);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(74, 20);
             this.lblMessage.TabIndex = 2;
@@ -130,7 +124,7 @@ namespace FactoryForms {
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(569, 435);
+            this.ClientSize = new System.Drawing.Size(569, 575);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.pnlProgressBar);
             this.Controls.Add(this.pnlMainImage);
@@ -141,21 +135,20 @@ namespace FactoryForms {
             this.Text = "Loading";
             this.Load += new System.EventHandler(this.frmOpening_Load);
             this.pnlMainImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ipbMainImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackImage)).EndInit();
             this.pnlProgressBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
         private System.Windows.Forms.Panel pnlMainImage;
-        private FontAwesome.Sharp.IconPictureBox ipbMainImage;
         private System.Windows.Forms.Panel pnlProgressBar;
         private System.Windows.Forms.ProgressBar pbProgress;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Timer timeFadeIn;
         private System.Windows.Forms.Timer timeFadeOut;
+        private System.Windows.Forms.PictureBox pbBackImage;
     }
 }

@@ -189,3 +189,82 @@
    en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 171
 -----------------------------
 
+28/6/2021 21:37:36 - System.InvalidOperationException: Ya hay un DataReader abierto asociado a este Command, debe cerrarlo primero.
+   en System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   en System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   en System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader()
+   en DAO.DatabaseManager.GetPieces(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 104
+   en DAO.DatabaseManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 81
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 184
+-----------------------------
+
+28/6/2021 21:39:23 - System.InvalidOperationException: Ya hay un DataReader abierto asociado a este Command, debe cerrarlo primero.
+   en System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   en System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   en System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader()
+   en DAO.DatabaseManager.GetPieces(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 104
+   en DAO.DatabaseManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 81
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 184
+-----------------------------
+
+28/6/2021 21:46:39 - System.InvalidOperationException: Ya hay un DataReader abierto asociado a este Command, debe cerrarlo primero.
+   en System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   en System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   en System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader()
+   en DAO.DatabaseManager.GetMaterialsOfPiece(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 131
+   en DAO.DatabaseManager.GetPieces(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 108
+   en DAO.DatabaseManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 83
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 184
+-----------------------------
+
+28/6/2021 21:47:54 - System.InvalidCastException: La conversión especificada no es válida.
+   en DAO.DatabaseManager.GetPieces(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 109
+   en DAO.DatabaseManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 83
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 184
+-----------------------------
+
+28/6/2021 22:27:24 - System.InvalidCastException: La conversión especificada no es válida.
+   en DAO.DatabaseManager.GetMaterialsOfPiece(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 138
+   en DAO.DatabaseManager.GetPieces(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 110
+   en DAO.DatabaseManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 83
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 184
+-----------------------------
+
+28/6/2021 22:41:07 - System.InvalidCastException: La conversión especificada no es válida.
+   en DAO.DatabaseManager.GetPieces(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 111
+   en DAO.DatabaseManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 83
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 184
+-----------------------------
+
+28/6/2021 22:41:36 - System.InvalidCastException: La conversión especificada no es válida.
+   en DAO.DatabaseManager.GetPieces(Int32 idRobot) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 111
+   en DAO.DatabaseManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DatabaseManager.cs:línea 83
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 184
+-----------------------------
+
+4/7/2021 03:39:29 - Exceptions.FactoryConnectionErrorException: La conversión especificada no es válida. ---> System.InvalidCastException: La conversión especificada no es válida.
+   en DAO.DataAccessManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DataAccessManager.cs:línea 60
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en DAO.DataAccessManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DataAccessManager.cs:línea 65
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 185
+-----------------------------
+
+4/7/2021 03:58:49 - Exceptions.FactoryConnectionErrorException: La conversión especificada no es válida. ---> System.InvalidCastException: La conversión especificada no es válida.
+   en DAO.DataAccessManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DataAccessManager.cs:línea 60
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en DAO.DataAccessManager.GetRobots() en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\Classes\DAO.Layer\DataAccessManager.cs:línea 65
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 185
+-----------------------------
+

@@ -24,14 +24,17 @@
 
 using Exceptions;
 using System;
-using System.Media;
+using WMPLib;
 
 namespace Models {
-    public static class MyPlayer {
+
+    public delegate void SoundPlayerHandler(object songName);
+
+    public class MyPlayer {
 
         #region Attributes
 
-        static SoundPlayer player;
+        static WindowsMediaPlayer player;
         static private bool isPlaying;
         static private bool isLooping;
 
@@ -42,8 +45,8 @@ namespace Models {
         /// <summary>
         /// Creates the entity with default constructor.
         /// </summary>
-        static MyPlayer() {
-            player = new SoundPlayer();
+        public MyPlayer() {
+            player = new WindowsMediaPlayer();
         }
 
         #endregion
@@ -54,10 +57,10 @@ namespace Models {
         /// Gets/Sets: The location of the sound.
         /// </summary>
         public static string SoundLocation {
-            get => player.SoundLocation;
+            get => player.URL;
             set {
                 if (value.GetType() == typeof(string)) {
-                    player.SoundLocation = value;
+                    player.URL = value;
                 }
             }
         }
@@ -93,15 +96,16 @@ namespace Models {
         /// <summary>
         /// Plays the sound passed by parameter.
         /// </summary>
-        public static void Play(string soundName, bool playInLoop) {
+        public void Play(string soundName, bool playInLoop) {
             SoundLocation = $"{Environment.CurrentDirectory}\\Sounds\\{soundName}.wav";
             try {
                 if (playInLoop) {
                     IsLooping = true;
-                    player.PlayLooping();
+                    player.PlayStateChange += this.PlayerPlayStateChange;
+                    player.controls.play();
                 } else {
                     IsLooping = false;
-                    player.Play();
+                    player.controls.play();
                 }
                 IsPlaying = true;
             } catch (Exception e) {
@@ -112,11 +116,17 @@ namespace Models {
         /// <summary>
         /// If the SoundPlayer instance isPlaying, stops it.
         /// </summary>
-        public static void Stop() {
+        public void Stop() {
             if (IsPlaying) {
                 IsPlaying = false;
                 IsLooping = false;
-                player.Stop();
+                player.controls.stop();
+            }
+        }
+
+        private void PlayerPlayStateChange(int NewState) {
+            if ((WMPPlayState)NewState == WMPPlayState.wmppsStopped) {
+                player.controls.play();
             }
         }
 

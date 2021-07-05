@@ -274,3 +274,33 @@ Manufacture Date: 26/6/2021 00:37:02
 
 -----------------------------
 
+4/7/2021 02:42:04 - Product: DragonZord
+Manufacture Batch: 713-800-708
+Manufacture Date: 4/7/2021 02:42:04
+
+-----------------------------
+
+4/7/2021 03:07:18 - Product: DragonZord
+Manufacture Batch: 605-677-768
+Manufacture Date: 4/7/2021 03:07:18
+
+-----------------------------
+
+4/7/2021 03:57:58 - Product: WallE
+Manufacture Batch: 523-857-724
+Manufacture Date: 4/7/2021 03:57:57
+
+-----------------------------
+
+4/7/2021 04:53:05 - Product: OptimusPrime
+Manufacture Batch: 648-604-638
+Manufacture Date: 4/7/2021 04:53:05
+
+-----------------------------
+
+4/7/2021 04:55:35 - Product: DragonZord
+Manufacture Batch: 846-650-568
+Manufacture Date: 4/7/2021 04:55:35
+
+-----------------------------
+

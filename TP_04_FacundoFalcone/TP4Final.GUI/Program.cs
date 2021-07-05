@@ -34,6 +34,8 @@ namespace FactoryForms {
         static void Main() {
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLobby());
+            //Application.Run(new frmJoke());
+            //Application.Run(new frmOpening());
         }
     }
 }

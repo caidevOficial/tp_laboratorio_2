@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DAO.Layer\DataAccessManager.cs" />
     <Compile Include="Classes\DAO.Layer\DatabaseManager.cs" />
+    <Compile Include="Classes\DAO.Layer\DataConnectorAbstract.cs" />
+    <Compile Include="Classes\Exceptions\FactoryConnectionErrorException.cs" />
     <Compile Include="Classes\Exceptions\InsufficientMaterialsException.cs" />
     <Compile Include="Classes\Exceptions\NoSoundFoundException.cs" />
     <Compile Include="Classes\Exceptions\QualityControlFailedException.cs" />
@@ -70,6 +73,17 @@
   <ItemGroup>
     <None Include="Diagrams.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

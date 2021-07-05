@@ -40,7 +40,7 @@ namespace UnitTestProjectTPFinal {
 
             #region Arrange
 
-            MyPlayer.Play("Here", false);
+            //MyPlayer.Play("Here", false);
 
             #endregion
         }

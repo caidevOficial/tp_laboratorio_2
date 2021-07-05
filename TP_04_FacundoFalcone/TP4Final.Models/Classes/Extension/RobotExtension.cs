@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+using Enums;
 using Materials;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,28 @@ using System.Threading.Tasks;
 namespace Models {
     public static class RobotExtension {
 
+        public static void FormatRobotPieceID(this RobotPiece piece, int robotSerial, int indexPiece) {
+            string prefix = string.Empty;
+            switch (piece.PieceType) {
+                case EPieceType.Head:
+                    prefix = "HE";
+                    break;
+                case EPieceType.Torso:
+                    prefix = "TO";
+                    break;
+                case EPieceType.UpperLimb:
+                    prefix = "UL";
+                    break;
+                case EPieceType.LowerLimb:
+                    prefix = "LL";
+                    break;
+                case EPieceType.Tail:
+                    prefix = "TA";
+                    break;
+            }
+            piece.PieceID = $"{robotSerial}-{prefix}-{indexPiece}";
+        }
+
         /// <summary>
         /// Extends the funcionability of a Robot, this methodwas made for set
         /// the serial number of the robot into its pieces and the material of
@@ -39,11 +62,14 @@ namespace Models {
         /// </summary>
         /// <param name="thisRobot">Class to extend.</param>
         /// <param name="aRobot">Entity to modify data.</param>
-        public static void SetSerialNumber(this Robot thisRobot, Robot aRobot){
-            foreach (RobotPiece item in aRobot.RobotPieces) {
-                item.AssociatedRobotSerial = aRobot.SerialNumber;
+        public static void SetSerialNumber(this Robot thisRobot) {
+            foreach (RobotPiece item in thisRobot.RobotPieces) {
+                item.AssociatedRobotSerial = thisRobot.SerialNumber;
+                //item.PieceID = $"{item.AssociatedRobotSerial.ToString()}-{thisRobot.RobotPieces.IndexOf(item)}";
+                item.FormatRobotPieceID(item.AssociatedRobotSerial, thisRobot.RobotPieces.IndexOf(item));
                 foreach (MaterialBucket itemBucket in item.RawMaterial) {
-                    itemBucket.AssociatedRobotSerial = aRobot.SerialNumber;
+                    itemBucket.AssociatedRobotSerial = thisRobot.SerialNumber;
+                    itemBucket.AssociatedPieceID = item.PieceID;
                 }
             }
         }

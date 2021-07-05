@@ -25,14 +25,21 @@
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace FactoryForms {
+
+    public delegate void LoadGif(object path); 
+
     public partial class frmOpening : Form {
 
         #region Attributes
 
         private List<string> messages;
+        private Thread gifThread;
+        private event LoadGif gifLoader;
 
         #endregion
 
@@ -43,6 +50,7 @@ namespace FactoryForms {
         /// </summary>
         public frmOpening() {
             InitializeComponent();
+            gifLoader += SetGifInPictureBox;
         }
 
         #endregion
@@ -60,6 +68,23 @@ namespace FactoryForms {
             this.pbProgress.Minimum = 0;
             this.pbProgress.Maximum = 100;
             this.timeFadeIn.Start();
+
+            ChargeAnimatedGif("Logo_Robot_Head");
+            ChargeListOfMessages();
+
+            try {
+                MyPlayer player = new MyPlayer();
+                player.Play("Opening", false);
+
+            } catch (Exception exe) {
+                frmLobby.FormExceptionHandler(exe);
+            }
+        }
+
+        /// <summary>
+        /// Charge the list of messages.
+        /// </summary>
+        private void ChargeListOfMessages() {
             messages = new List<string>() {
                 "Loading Resources...",
                 "Hiring New Employees...",
@@ -68,12 +93,28 @@ namespace FactoryForms {
                 "Contacting Clients",
                 "Preparing Coffee..."
             };
-            try {
-                MyPlayer.Play("Opening", false);
+        }
 
-            } catch (Exception exe) {
-                frmLobby.FormExceptionHandler(exe);
+        /// <summary>
+        /// Sets a gif image in the principal picture box.
+        /// </summary>
+        /// <param name="path">Name of the file.</param>
+        private void SetGifInPictureBox(object path) {
+            string newPath = (string)path;
+            this.pbBackImage.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(newPath);
+        }
+
+        /// <summary>
+        /// Charge 
+        /// </summary>
+        /// <param name="path"></param>
+        private void ChargeAnimatedGif(object path) {
+            if (this.pbBackImage.InvokeRequired) {
+                LoadGif gift = new LoadGif(this.SetGifInPictureBox);
+                this.BeginInvoke(gift, new object[] { path });
             }
+            this.gifThread = new Thread(new ParameterizedThreadStart(gifLoader));
+            gifThread.Start(path);
         }
 
         #endregion
@@ -135,6 +176,9 @@ namespace FactoryForms {
                 this.pbProgress.Value += 1;
             }
             if (this.Opacity == 0) {
+                if (this.gifThread.IsAlive) {
+                    this.gifThread.Abort();
+                }
                 this.Close();
             }
         }

@@ -33,6 +33,7 @@ namespace Materials {
         #region Attributes
 
         private int associatedRobotSerial;
+        private string associatedPieceID;
         private Product productForBucket;
         private int amount;
 
@@ -101,8 +102,20 @@ namespace Materials {
         public int AssociatedRobotSerial {
             get => this.associatedRobotSerial;
             set {
-                if (value >= 0) {
+                if (value > 0) {
                     this.associatedRobotSerial = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Get/Set: The Associated Piece ID of the bucket.
+        /// </summary>
+        public string AssociatedPieceID {
+            get => this.associatedPieceID;
+            set {
+                if (!String.IsNullOrWhiteSpace(value)) {
+                    this.associatedPieceID = value;
                 }
             }
         }

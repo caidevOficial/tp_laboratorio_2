@@ -109,7 +109,8 @@ namespace FactoryForms {
                     pbImageRobot.Visible = true;
                     pbImageRobot.Image = null;
                     Robot robot = dgvRobots.CurrentRow.DataBoundItem as Robot;
-                    MyPlayer.Play($"Create{robot.Model}", false);
+                    MyPlayer player = new MyPlayer();
+                    player.Play($"Create{robot.Model}", false);
                     rtbInfoRobot.Text = robot.Information();
                     pbImageRobot.Image = Image.FromFile($"{systemImagePath}\\{robot.Model}.png");
                 } else {
@@ -118,7 +119,6 @@ namespace FactoryForms {
             } catch (Exception exe) {
                 frmLobby.FormExceptionHandler(exe);
             }
-
         }
 
         private void UpdateDataGridView<T>(List<T> list) {

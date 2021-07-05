@@ -50,7 +50,8 @@ namespace FactoryForms {
             this.pbProgress.Minimum = 0;
             this.pbProgress.Maximum = 100;
             this.tmrFadeIn.Start();
-            MyPlayer.Play("ShutdownForm", false);
+            MyPlayer player = new MyPlayer();
+            player.Play("ShutdownForm", false);
         }
 
         #endregion

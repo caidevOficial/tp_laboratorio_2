@@ -5,6 +5,7 @@ E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\bin\Debug\F
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\bin\Debug\Models.dll
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\bin\Debug\Models.pdb
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\obj\Debug\TP4Final.GUI.csprojAssemblyReference.cache
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\obj\Debug\FactoryForms.frmJoke.resources
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\obj\Debug\FactoryForms.frmShutdown.resources
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\obj\Debug\FactoryForms.frmException.resources
 E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\obj\Debug\FactoryForms.frmDashboard.resources
