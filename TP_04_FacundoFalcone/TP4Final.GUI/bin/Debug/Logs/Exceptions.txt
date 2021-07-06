@@ -268,3 +268,18 @@
    en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\Factory\Lobby\frmLobby.cs:línea 185
 -----------------------------
 
+6/7/2021 14:05:42 - Exceptions.InsufficientMaterialsException: Insufficients Materials to build this model of robot, you need to import more materials in the machine room or choose another model.
+   en FactoryForms.frmSelectModel.ConfigureRobotForBuild(EMetalType metalType, EOrigin origin, EModelName modelName, Int32 amountHead, Int32 amounTorso, Int32 amountArms, Int32 amountLegs, Int32 amountTail, Boolean isRidable) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 120
+   en FactoryForms.frmSelectModel.btnBladeLiger_Click(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 197
+-----------------------------
+
+6/7/2021 14:05:51 - Exceptions.InsufficientMaterialsException: Insufficients Materials to build this model of robot, you need to import more materials in the machine room or choose another model.
+   en FactoryForms.frmSelectModel.ConfigureRobotForBuild(EMetalType metalType, EOrigin origin, EModelName modelName, Int32 amountHead, Int32 amounTorso, Int32 amountArms, Int32 amountLegs, Int32 amountTail, Boolean isRidable) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 120
+   en FactoryForms.frmSelectModel.btnDragonZord_Click(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 227
+-----------------------------
+
+6/7/2021 14:08:00 - Exceptions.InsufficientMaterialsException: Insufficients Materials to build this model of robot, you need to import more materials in the machine room or choose another model.
+   en FactoryForms.frmSelectModel.ConfigureRobotForBuild(EMetalType metalType, EOrigin origin, EModelName modelName, Int32 amountHead, Int32 amounTorso, Int32 amountArms, Int32 amountLegs, Int32 amountTail, Boolean isRidable) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 120
+   en FactoryForms.frmSelectModel.btnEva01_Click(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 242
+-----------------------------
+

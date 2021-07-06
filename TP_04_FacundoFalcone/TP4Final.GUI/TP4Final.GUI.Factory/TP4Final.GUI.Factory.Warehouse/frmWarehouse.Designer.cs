@@ -166,11 +166,11 @@ namespace FactoryForms {
             this.ibtnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnSearch.IconSize = 38;
             this.ibtnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ibtnSearch.Location = new System.Drawing.Point(424, 4);
+            this.ibtnSearch.Location = new System.Drawing.Point(407, 4);
             this.ibtnSearch.Name = "ibtnSearch";
-            this.ibtnSearch.Size = new System.Drawing.Size(101, 38);
+            this.ibtnSearch.Size = new System.Drawing.Size(118, 38);
             this.ibtnSearch.TabIndex = 9;
-            this.ibtnSearch.Text = "Search By Model";
+            this.ibtnSearch.Text = "Search By Model/Origin";
             this.ibtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ibtnSearch.UseVisualStyleBackColor = false;
             // 

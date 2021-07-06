@@ -144,9 +144,11 @@ namespace FactoryForms {
 
         #endregion
 
+        #region TextBoxEventHandler
+
         /// <summary>
         /// Search into the list of robots, is exist at least one robot with the
-        /// name indicated by the user.
+        /// name or origin indicated by the user.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -156,7 +158,8 @@ namespace FactoryForms {
                 string search = this.txtSearch.Text.Trim().ToLower();
                 if (!String.IsNullOrWhiteSpace(search)) {
                     foreach (Robot item in RobotFactory.Robots) {
-                        if(item.Model.ToString().ToLower() == search) {
+                        if(item.Model.ToString().ToLower().Contains(search) ||
+                            item.Origin.ToString().ToLower().Contains(search)) {
                             robots.Add(item);
                         }
                     }
@@ -166,5 +169,7 @@ namespace FactoryForms {
                 }
             }
         }
+
+        #endregion
     }
 }
