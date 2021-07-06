@@ -54,31 +54,36 @@ namespace FactoryForms {
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCurrentChildFormTitle = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.btnWarehouse = new FontAwesome.Sharp.IconButton();
-            this.btnMachineRoom = new FontAwesome.Sharp.IconButton();
-            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.ibtnClose = new FontAwesome.Sharp.IconButton();
+            this.btnMachineRoom = new FontAwesome.Sharp.IconButton();
             this.btnManufacture = new FontAwesome.Sharp.IconButton();
+            this.btnWarehouse = new FontAwesome.Sharp.IconButton();
+            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.pnlButtom = new System.Windows.Forms.Panel();
+            this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.ipbImageIcon4 = new FontAwesome.Sharp.IconPictureBox();
             this.ipbImageIcon3 = new FontAwesome.Sharp.IconPictureBox();
             this.ipbImageIcon2 = new FontAwesome.Sharp.IconPictureBox();
             this.ipbImageIcon1 = new FontAwesome.Sharp.IconPictureBox();
-            this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
+            this.menuHome = new System.Windows.Forms.MenuStrip();
+            this.openDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.XmlFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TxtFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon1)).BeginInit();
+            this.menuHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTitleBar
@@ -98,7 +103,7 @@ namespace FactoryForms {
             // 
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(427, 9);
+            this.lblTime.Location = new System.Drawing.Point(427, 11);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(291, 23);
             this.lblTime.TabIndex = 0;
@@ -109,7 +114,7 @@ namespace FactoryForms {
             // 
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblDate.Location = new System.Drawing.Point(423, 35);
+            this.lblDate.Location = new System.Drawing.Point(423, 37);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(295, 24);
             this.lblDate.TabIndex = 1;
@@ -121,7 +126,7 @@ namespace FactoryForms {
             this.lblCurrentChildFormTitle.AutoSize = true;
             this.lblCurrentChildFormTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentChildFormTitle.ForeColor = System.Drawing.Color.White;
-            this.lblCurrentChildFormTitle.Location = new System.Drawing.Point(55, 35);
+            this.lblCurrentChildFormTitle.Location = new System.Drawing.Point(55, 33);
             this.lblCurrentChildFormTitle.Name = "lblCurrentChildFormTitle";
             this.lblCurrentChildFormTitle.Size = new System.Drawing.Size(56, 20);
             this.lblCurrentChildFormTitle.TabIndex = 1;
@@ -134,11 +139,20 @@ namespace FactoryForms {
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm.IconSize = 43;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 22);
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 20);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.Size = new System.Drawing.Size(43, 43);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.pbLogo);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(154, 119);
+            this.pnlLogo.TabIndex = 0;
             // 
             // pbLogo
             // 
@@ -151,81 +165,6 @@ namespace FactoryForms {
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
-            // 
-            // btnWarehouse
-            // 
-            this.btnWarehouse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWarehouse.FlatAppearance.BorderSize = 0;
-            this.btnWarehouse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
-            this.btnWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWarehouse.ForeColor = System.Drawing.Color.White;
-            this.btnWarehouse.IconChar = FontAwesome.Sharp.IconChar.Dolly;
-            this.btnWarehouse.IconColor = System.Drawing.Color.OrangeRed;
-            this.btnWarehouse.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnWarehouse.IconSize = 40;
-            this.btnWarehouse.Location = new System.Drawing.Point(0, 413);
-            this.btnWarehouse.Name = "btnWarehouse";
-            this.btnWarehouse.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnWarehouse.Size = new System.Drawing.Size(154, 90);
-            this.btnWarehouse.TabIndex = 3;
-            this.btnWarehouse.Text = "Warehouse";
-            this.btnWarehouse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnWarehouse.UseVisualStyleBackColor = true;
-            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
-            // 
-            // btnMachineRoom
-            // 
-            this.btnMachineRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMachineRoom.FlatAppearance.BorderSize = 0;
-            this.btnMachineRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
-            this.btnMachineRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMachineRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMachineRoom.ForeColor = System.Drawing.Color.White;
-            this.btnMachineRoom.IconChar = FontAwesome.Sharp.IconChar.SteamSquare;
-            this.btnMachineRoom.IconColor = System.Drawing.Color.OrangeRed;
-            this.btnMachineRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMachineRoom.IconSize = 40;
-            this.btnMachineRoom.Location = new System.Drawing.Point(0, 221);
-            this.btnMachineRoom.Name = "btnMachineRoom";
-            this.btnMachineRoom.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMachineRoom.Size = new System.Drawing.Size(154, 90);
-            this.btnMachineRoom.TabIndex = 1;
-            this.btnMachineRoom.Text = "Machines room";
-            this.btnMachineRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMachineRoom.UseVisualStyleBackColor = true;
-            this.btnMachineRoom.Click += new System.EventHandler(this.btnMachineRoom_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            this.btnDashboard.IconColor = System.Drawing.Color.OrangeRed;
-            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDashboard.IconSize = 40;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 125);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(154, 90);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.pbLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(154, 119);
-            this.pnlLogo.TabIndex = 0;
             // 
             // pnlMenu
             // 
@@ -262,6 +201,28 @@ namespace FactoryForms {
             this.ibtnClose.UseVisualStyleBackColor = true;
             this.ibtnClose.Click += new System.EventHandler(this.ibtnClose_Click);
             // 
+            // btnMachineRoom
+            // 
+            this.btnMachineRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMachineRoom.FlatAppearance.BorderSize = 0;
+            this.btnMachineRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnMachineRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMachineRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMachineRoom.ForeColor = System.Drawing.Color.White;
+            this.btnMachineRoom.IconChar = FontAwesome.Sharp.IconChar.SteamSquare;
+            this.btnMachineRoom.IconColor = System.Drawing.Color.OrangeRed;
+            this.btnMachineRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMachineRoom.IconSize = 40;
+            this.btnMachineRoom.Location = new System.Drawing.Point(0, 221);
+            this.btnMachineRoom.Name = "btnMachineRoom";
+            this.btnMachineRoom.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnMachineRoom.Size = new System.Drawing.Size(154, 90);
+            this.btnMachineRoom.TabIndex = 1;
+            this.btnMachineRoom.Text = "Machines room";
+            this.btnMachineRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMachineRoom.UseVisualStyleBackColor = true;
+            this.btnMachineRoom.Click += new System.EventHandler(this.btnMachineRoom_Click);
+            // 
             // btnManufacture
             // 
             this.btnManufacture.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -284,6 +245,50 @@ namespace FactoryForms {
             this.btnManufacture.UseVisualStyleBackColor = true;
             this.btnManufacture.Click += new System.EventHandler(this.btnManufacture_Click);
             // 
+            // btnWarehouse
+            // 
+            this.btnWarehouse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWarehouse.FlatAppearance.BorderSize = 0;
+            this.btnWarehouse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWarehouse.ForeColor = System.Drawing.Color.White;
+            this.btnWarehouse.IconChar = FontAwesome.Sharp.IconChar.Dolly;
+            this.btnWarehouse.IconColor = System.Drawing.Color.OrangeRed;
+            this.btnWarehouse.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnWarehouse.IconSize = 40;
+            this.btnWarehouse.Location = new System.Drawing.Point(0, 413);
+            this.btnWarehouse.Name = "btnWarehouse";
+            this.btnWarehouse.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnWarehouse.Size = new System.Drawing.Size(154, 90);
+            this.btnWarehouse.TabIndex = 3;
+            this.btnWarehouse.Text = "Warehouse";
+            this.btnWarehouse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnWarehouse.UseVisualStyleBackColor = true;
+            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            this.btnDashboard.IconColor = System.Drawing.Color.OrangeRed;
+            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDashboard.IconSize = 40;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 125);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(154, 90);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
             // pnlButtom
             // 
             this.pnlButtom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -292,6 +297,11 @@ namespace FactoryForms {
             this.pnlButtom.Name = "pnlButtom";
             this.pnlButtom.Size = new System.Drawing.Size(730, 62);
             this.pnlButtom.TabIndex = 16;
+            // 
+            // tmrDateTime
+            // 
+            this.tmrDateTime.Enabled = true;
+            this.tmrDateTime.Tick += new System.EventHandler(this.tmrDateTime_Tick);
             // 
             // pnlChildForm
             // 
@@ -302,6 +312,7 @@ namespace FactoryForms {
             this.pnlChildForm.Controls.Add(this.ipbImageIcon3);
             this.pnlChildForm.Controls.Add(this.ipbImageIcon2);
             this.pnlChildForm.Controls.Add(this.ipbImageIcon1);
+            this.pnlChildForm.Controls.Add(this.menuHome);
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(154, 75);
             this.pnlChildForm.Name = "pnlChildForm";
@@ -318,7 +329,7 @@ namespace FactoryForms {
             this.ipbImageIcon4.IconColor = System.Drawing.SystemColors.ControlText;
             this.ipbImageIcon4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ipbImageIcon4.IconSize = 141;
-            this.ipbImageIcon4.Location = new System.Drawing.Point(554, 21);
+            this.ipbImageIcon4.Location = new System.Drawing.Point(554, 34);
             this.ipbImageIcon4.Name = "ipbImageIcon4";
             this.ipbImageIcon4.Size = new System.Drawing.Size(164, 141);
             this.ipbImageIcon4.TabIndex = 3;
@@ -334,7 +345,7 @@ namespace FactoryForms {
             this.ipbImageIcon3.IconColor = System.Drawing.SystemColors.ControlText;
             this.ipbImageIcon3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ipbImageIcon3.IconSize = 141;
-            this.ipbImageIcon3.Location = new System.Drawing.Point(375, 21);
+            this.ipbImageIcon3.Location = new System.Drawing.Point(375, 34);
             this.ipbImageIcon3.Name = "ipbImageIcon3";
             this.ipbImageIcon3.Size = new System.Drawing.Size(164, 141);
             this.ipbImageIcon3.TabIndex = 2;
@@ -350,7 +361,7 @@ namespace FactoryForms {
             this.ipbImageIcon2.IconColor = System.Drawing.SystemColors.ControlText;
             this.ipbImageIcon2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ipbImageIcon2.IconSize = 141;
-            this.ipbImageIcon2.Location = new System.Drawing.Point(194, 21);
+            this.ipbImageIcon2.Location = new System.Drawing.Point(194, 34);
             this.ipbImageIcon2.Name = "ipbImageIcon2";
             this.ipbImageIcon2.Size = new System.Drawing.Size(164, 141);
             this.ipbImageIcon2.TabIndex = 1;
@@ -366,16 +377,44 @@ namespace FactoryForms {
             this.ipbImageIcon1.IconColor = System.Drawing.SystemColors.ControlText;
             this.ipbImageIcon1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ipbImageIcon1.IconSize = 141;
-            this.ipbImageIcon1.Location = new System.Drawing.Point(15, 21);
+            this.ipbImageIcon1.Location = new System.Drawing.Point(15, 34);
             this.ipbImageIcon1.Name = "ipbImageIcon1";
             this.ipbImageIcon1.Size = new System.Drawing.Size(164, 141);
             this.ipbImageIcon1.TabIndex = 0;
             this.ipbImageIcon1.TabStop = false;
             // 
-            // tmrDateTime
+            // menuHome
             // 
-            this.tmrDateTime.Enabled = true;
-            this.tmrDateTime.Tick += new System.EventHandler(this.tmrDateTime_Tick);
+            this.menuHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openDocumentToolStripMenuItem});
+            this.menuHome.Location = new System.Drawing.Point(0, 0);
+            this.menuHome.Name = "menuHome";
+            this.menuHome.Size = new System.Drawing.Size(730, 24);
+            this.menuHome.TabIndex = 4;
+            this.menuHome.Text = "menuStrip1";
+            // 
+            // openDocumentToolStripMenuItem
+            // 
+            this.openDocumentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.XmlFileToolStripMenuItem,
+            this.TxtFileToolStripMenuItem});
+            this.openDocumentToolStripMenuItem.Name = "openDocumentToolStripMenuItem";
+            this.openDocumentToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.openDocumentToolStripMenuItem.Text = "Open File";
+            // 
+            // XmlFileToolStripMenuItem
+            // 
+            this.XmlFileToolStripMenuItem.Name = "XmlFileToolStripMenuItem";
+            this.XmlFileToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.XmlFileToolStripMenuItem.Text = "XML File";
+            this.XmlFileToolStripMenuItem.Click += new System.EventHandler(this.XmlFileToolStripMenuItem_Click);
+            // 
+            // TxtFileToolStripMenuItem
+            // 
+            this.TxtFileToolStripMenuItem.Name = "TxtFileToolStripMenuItem";
+            this.TxtFileToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.TxtFileToolStripMenuItem.Text = "TXT File";
+            this.TxtFileToolStripMenuItem.Click += new System.EventHandler(this.TxtFileToolStripMenuItem_Click_1);
             // 
             // frmLobby
             // 
@@ -396,14 +435,17 @@ namespace FactoryForms {
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
+            this.pnlChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbImageIcon1)).EndInit();
+            this.menuHome.ResumeLayout(false);
+            this.menuHome.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -430,5 +472,9 @@ namespace FactoryForms {
         private FontAwesome.Sharp.IconPictureBox ipbImageIcon3;
         private FontAwesome.Sharp.IconPictureBox ipbImageIcon2;
         private FontAwesome.Sharp.IconPictureBox ipbImageIcon1;
+        private System.Windows.Forms.MenuStrip menuHome;
+        private System.Windows.Forms.ToolStripMenuItem openDocumentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem XmlFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TxtFileToolStripMenuItem;
     }
 }

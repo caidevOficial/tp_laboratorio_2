@@ -104,6 +104,12 @@
     <Compile Include="Factory\Manufacture\frmManufacture.Designer.cs">
       <DependentUpon>frmManufacture.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factory\Reports\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Reports\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factory\Warehouse\frmWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Factory\Manufacture\frmManufacture.resx">
       <DependentUpon>frmManufacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Reports\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Factory\Warehouse\frmWarehouse.resx">
       <DependentUpon>frmWarehouse.cs</DependentUpon>

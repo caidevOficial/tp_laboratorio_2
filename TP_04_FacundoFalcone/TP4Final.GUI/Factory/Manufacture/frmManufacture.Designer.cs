@@ -81,7 +81,7 @@ namespace FactoryForms {
             this.btnMugendramon.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnMugendramon.ImageIndex = 1;
             this.btnMugendramon.ImageList = this.imlIcons;
-            this.btnMugendramon.Location = new System.Drawing.Point(151, 363);
+            this.btnMugendramon.Location = new System.Drawing.Point(151, 317);
             this.btnMugendramon.Name = "btnMugendramon";
             this.btnMugendramon.Size = new System.Drawing.Size(133, 124);
             this.btnMugendramon.TabIndex = 6;
@@ -101,7 +101,7 @@ namespace FactoryForms {
             this.btnBladeLiger.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnBladeLiger.ImageIndex = 7;
             this.btnBladeLiger.ImageList = this.imlIcons;
-            this.btnBladeLiger.Location = new System.Drawing.Point(568, 363);
+            this.btnBladeLiger.Location = new System.Drawing.Point(568, 317);
             this.btnBladeLiger.Name = "btnBladeLiger";
             this.btnBladeLiger.Size = new System.Drawing.Size(133, 124);
             this.btnBladeLiger.TabIndex = 8;
@@ -178,7 +178,7 @@ namespace FactoryForms {
             this.btnDragonZord.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDragonZord.ImageIndex = 0;
             this.btnDragonZord.ImageList = this.imlIcons;
-            this.btnDragonZord.Location = new System.Drawing.Point(12, 363);
+            this.btnDragonZord.Location = new System.Drawing.Point(12, 317);
             this.btnDragonZord.Name = "btnDragonZord";
             this.btnDragonZord.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnDragonZord.Size = new System.Drawing.Size(133, 124);
@@ -198,7 +198,7 @@ namespace FactoryForms {
             this.btnEva01.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnEva01.ImageIndex = 6;
             this.btnEva01.ImageList = this.imlIcons;
-            this.btnEva01.Location = new System.Drawing.Point(429, 363);
+            this.btnEva01.Location = new System.Drawing.Point(429, 317);
             this.btnEva01.Name = "btnEva01";
             this.btnEva01.Size = new System.Drawing.Size(133, 124);
             this.btnEva01.TabIndex = 7;
@@ -233,7 +233,7 @@ namespace FactoryForms {
             this.lblSelectRobot.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectRobot.Font = new System.Drawing.Font("Segoe Print", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectRobot.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblSelectRobot.Location = new System.Drawing.Point(110, 242);
+            this.lblSelectRobot.Location = new System.Drawing.Point(110, 196);
             this.lblSelectRobot.Name = "lblSelectRobot";
             this.lblSelectRobot.Size = new System.Drawing.Size(525, 57);
             this.lblSelectRobot.TabIndex = 9;
@@ -261,7 +261,7 @@ namespace FactoryForms {
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmManufacture";
+            this.Name = "frmSelectModel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manufacture";
             this.ResumeLayout(false);

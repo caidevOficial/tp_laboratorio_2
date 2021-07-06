@@ -38,7 +38,16 @@ namespace Models {
         /// <param name="file"></param>
         /// <returns></returns>
         public string Read(string file) {
-            throw new NotImplementedException();
+            string myText = string.Empty;
+            if (!File.Exists(file)) {
+                throw new Exception("Excepcion");
+            } else {
+                using (StreamReader sr = new StreamReader(file)) {
+                    myText = sr.ReadToEnd();
+                }
+            }
+
+            return myText;
         }
 
         /// <summary>

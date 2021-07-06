@@ -79,14 +79,16 @@ namespace FactoryForms {
                 robotsSelected = true;
                 rtbInfoRobot.Visible = robotsSelected;
                 //paso lista ordenada por un valor en concreto
-                UpdateDataGridView(RobotFactory.Robots.OrderBy(x => x.SerialNumber).ToList());
-                dgvRobots.Columns[0].HeaderText = "Serial N°";
-                dgvRobots.Columns[3].HeaderText = "For Ride";
-                dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
+                UpdateDataGridRobot(RobotFactory.Robots);
+                //UpdateDataGridView(RobotFactory.Robots.OrderBy(x => x.SerialNumber).ToList());
+                //dgvRobots.Columns[0].HeaderText = "Serial N°";
+                //dgvRobots.Columns[3].HeaderText = "For Ride";
+                //dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
 
             } else if (cmbWarehouseShow.SelectedItem.ToString() == "Materials") {
                 robotsSelected = false;
                 // Paso lista como viene
+                
                 UpdateDataGridView(RobotFactory.Buckets);
                 dgvRobots.Columns[0].Visible = false;
                 dgvRobots.Columns[1].HeaderText = "Material";
@@ -121,6 +123,13 @@ namespace FactoryForms {
             }
         }
 
+        private void UpdateDataGridRobot(List<Robot> list) {
+            UpdateDataGridView(list.OrderBy(x => x.SerialNumber).ToList());
+            dgvRobots.Columns[0].HeaderText = "Serial N°";
+            dgvRobots.Columns[3].HeaderText = "For Ride";
+            dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
+        }
+
         private void UpdateDataGridView<T>(List<T> list) {
             dgvRobots.DataSource = null;
             dgvRobots.DataSource = list;
@@ -128,5 +137,21 @@ namespace FactoryForms {
 
         #endregion
 
+        private void txtSearch_TextChanged(object sender, EventArgs e) {
+            List<Robot> robots = new List<Robot>();
+            if (robotsSelected) {
+                string search = this.txtSearch.Text;
+                if (!String.IsNullOrWhiteSpace(search)) {
+                    foreach (Robot item in RobotFactory.Robots) {
+                        if(item.Model.ToString() == search) {
+                            robots.Add(item);
+                        }
+                    }
+                    UpdateDataGridRobot(robots);
+                } else {
+                    UpdateDataGridRobot(RobotFactory.Robots);
+                }
+            }
+        }
     }
 }

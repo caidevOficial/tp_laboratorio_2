@@ -304,3 +304,45 @@ Manufacture Date: 4/7/2021 04:55:35
 
 -----------------------------
 
+6/7/2021 01:14:46 - Product: WallE
+Manufacture Batch: 578-835-572
+Manufacture Date: 6/7/2021 01:14:46
+
+-----------------------------
+
+6/7/2021 01:14:55 - Product: WallE
+Manufacture Batch: 602-542-790
+Manufacture Date: 6/7/2021 01:14:55
+
+-----------------------------
+
+6/7/2021 01:15:03 - Product: DragonZord
+Manufacture Batch: 628-830-575
+Manufacture Date: 6/7/2021 01:15:03
+
+-----------------------------
+
+6/7/2021 01:18:07 - Product: Eva01
+Manufacture Batch: 509-524-550
+Manufacture Date: 6/7/2021 01:18:07
+
+-----------------------------
+
+6/7/2021 01:18:22 - Product: BladeLiger
+Manufacture Batch: 705-869-760
+Manufacture Date: 6/7/2021 01:18:22
+
+-----------------------------
+
+6/7/2021 01:18:40 - Product: Mugendramon
+Manufacture Batch: 680-527-526
+Manufacture Date: 6/7/2021 01:18:40
+
+-----------------------------
+
+6/7/2021 01:19:17 - Product: T800
+Manufacture Batch: 503-529-811
+Manufacture Date: 6/7/2021 01:19:17
+
+-----------------------------
+

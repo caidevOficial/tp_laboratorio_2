@@ -35,10 +35,13 @@ namespace FactoryForms {
             this.pbImageRobot = new System.Windows.Forms.PictureBox();
             this.pnlInfoRobot = new System.Windows.Forms.Panel();
             this.rtbInfoRobot = new System.Windows.Forms.RichTextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRobots)).BeginInit();
             this.pnlImageRobot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageRobot)).BeginInit();
             this.pnlInfoRobot.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRobots
@@ -69,7 +72,7 @@ namespace FactoryForms {
             this.dgvRobots.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvRobots.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dgvRobots.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.dgvRobots.Location = new System.Drawing.Point(177, 39);
+            this.dgvRobots.Location = new System.Drawing.Point(168, 59);
             this.dgvRobots.Name = "dgvRobots";
             this.dgvRobots.ReadOnly = true;
             this.dgvRobots.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -94,7 +97,7 @@ namespace FactoryForms {
             // cmbWarehouseShow
             // 
             this.cmbWarehouseShow.FormattingEnabled = true;
-            this.cmbWarehouseShow.Location = new System.Drawing.Point(177, 12);
+            this.cmbWarehouseShow.Location = new System.Drawing.Point(168, 32);
             this.cmbWarehouseShow.Name = "cmbWarehouseShow";
             this.cmbWarehouseShow.Size = new System.Drawing.Size(121, 21);
             this.cmbWarehouseShow.TabIndex = 3;
@@ -142,6 +145,33 @@ namespace FactoryForms {
             this.rtbInfoRobot.TabIndex = 12;
             this.rtbInfoRobot.Text = "";
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.OrangeRed;
+            this.txtSearch.Location = new System.Drawing.Point(541, 12);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(141, 35);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.OrangeRed;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 35;
+            this.iconPictureBox1.Location = new System.Drawing.Point(494, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(41, 35);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBox1.TabIndex = 8;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // frmWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +180,8 @@ namespace FactoryForms {
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(730, 499);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.pnlInfoRobot);
             this.Controls.Add(this.pnlImageRobot);
             this.Controls.Add(this.cmbWarehouseShow);
@@ -166,7 +198,9 @@ namespace FactoryForms {
             this.pnlImageRobot.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImageRobot)).EndInit();
             this.pnlInfoRobot.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -177,5 +211,7 @@ namespace FactoryForms {
         private System.Windows.Forms.Panel pnlInfoRobot;
         private System.Windows.Forms.RichTextBox rtbInfoRobot;
         private System.Windows.Forms.PictureBox pbImageRobot;
+        private System.Windows.Forms.TextBox txtSearch;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

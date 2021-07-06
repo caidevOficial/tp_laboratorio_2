@@ -30,13 +30,11 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
 namespace FactoryForms {
-
-
-    
 
     public partial class frmLobby : Form {
 
@@ -44,6 +42,10 @@ namespace FactoryForms {
 
         //private event SoundPlayerHandler myDelPlayer;
         //private Thread myPlayerThread;
+        private const string EXTENSION_XML = ".xml";
+        private const string EXTENSION_TXT = ".txt";
+        private frmReports reports;
+        private OpenFileDialog openFile;
         private Form activeForm;
         private Panel leftBorderBtn;
         private IconButton currentBtn;
@@ -51,6 +53,8 @@ namespace FactoryForms {
         private static frmShutdown formShut;
         private static SerialManager<List<Robot>> smr;
         private static SerialManager<List<MaterialBucket>> smb;
+        private SerialManager<List<MaterialBucket>> serialManager;
+        private TextManager textManager;
         private static List<Thread> threads;
         private static readonly string frmDashboardSound = "DashboardForm";
         private static readonly string frmWarehouseSound = "WarehouseForm";
@@ -94,9 +98,10 @@ namespace FactoryForms {
             this.DoubleBuffered = true;
             //myDelPlayer += MyPlayerMainMusic;
             threads = new List<Thread>();
-            smb = new SerialManager<List<MaterialBucket>>();
             smr = new SerialManager<List<Robot>>();
-
+            smb = new SerialManager<List<MaterialBucket>>();
+            serialManager = new SerialManager<List<MaterialBucket>>();
+            textManager = new TextManager();
         }
 
         #endregion
@@ -375,5 +380,42 @@ namespace FactoryForms {
 
         #endregion
 
+        private void XmlFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            StringBuilder data = new StringBuilder();
+            string file = string.Empty;
+            List<MaterialBucket> myList;
+            openFile = new OpenFileDialog();
+            openFile.InitialDirectory = persistencePath;
+            if (openFile.ShowDialog() == DialogResult.OK) {
+                file = openFile.FileName;
+                if (Path.GetExtension(file) == EXTENSION_XML) {
+                    myList = new List<MaterialBucket>(serialManager.Read(file));
+                    foreach (MaterialBucket item in myList) {
+                        data.AppendLine(item.Information());
+                    }
+                    reports = new frmReports(data.ToString());
+                    reports.ShowDialog();
+                } else {
+                    MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void TxtFileToolStripMenuItem_Click_1(object sender, EventArgs e) {
+            string text = string.Empty;
+            string file = string.Empty;
+            openFile = new OpenFileDialog();
+            openFile.InitialDirectory = $"{systemPath}\\Manufacture_Historial";
+            if (openFile.ShowDialog() == DialogResult.OK) {
+                file = openFile.FileName;
+                if (Path.GetExtension(file) == EXTENSION_TXT) {
+                    text = textManager.Read(file);
+                    reports = new frmReports(text);
+                    reports.ShowDialog();
+                } else {
+                    MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
