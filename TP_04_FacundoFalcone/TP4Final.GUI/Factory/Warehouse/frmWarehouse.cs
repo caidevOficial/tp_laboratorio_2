@@ -47,7 +47,7 @@ namespace FactoryForms {
         /// </summary>
         public frmWarehouse() {
             InitializeComponent();
-            robotsSelected = true;
+            this.robotsSelected = true;
         }
 
         #endregion
@@ -60,8 +60,8 @@ namespace FactoryForms {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void frmWarehouse_Load(object sender, EventArgs e) {
-            rtbInfoRobot.Visible = false;
-            cmbWarehouseShow.DataSource = new List<string>() { "Robots", "Materials" };
+            this.rtbInfoRobot.Visible = false;
+            this.cmbWarehouseShow.DataSource = new List<string>() { "Robots", "Materials" };
         }
 
         #endregion
@@ -75,26 +75,24 @@ namespace FactoryForms {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void cmbWarehouseShow_SelectedIndexChanged(object sender, EventArgs e) {
-            if (cmbWarehouseShow.SelectedItem.ToString() == "Robots") {
-                robotsSelected = true;
-                rtbInfoRobot.Visible = robotsSelected;
+            if (this.cmbWarehouseShow.SelectedItem.ToString() == "Robots") {
+                this.robotsSelected = true;
+                this.rtbInfoRobot.Visible = robotsSelected;
+                this.txtSearch.Visible = true;
+                this.ibtnSearch.Visible = true;
                 //paso lista ordenada por un valor en concreto
                 UpdateDataGridRobot(RobotFactory.Robots);
-                //UpdateDataGridView(RobotFactory.Robots.OrderBy(x => x.SerialNumber).ToList());
-                //dgvRobots.Columns[0].HeaderText = "Serial N°";
-                //dgvRobots.Columns[3].HeaderText = "For Ride";
-                //dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
 
             } else if (cmbWarehouseShow.SelectedItem.ToString() == "Materials") {
-                robotsSelected = false;
-                // Paso lista como viene
-                
+                this.robotsSelected = false;
+                this.txtSearch.Visible = false;
+                this.ibtnSearch.Visible = false;
                 UpdateDataGridView(RobotFactory.Buckets);
-                dgvRobots.Columns[0].Visible = false;
-                dgvRobots.Columns[1].HeaderText = "Material";
-                dgvRobots.Columns[2].HeaderText = "Cantidad";
-                dgvRobots.Columns[3].Visible = false;
-                rtbInfoRobot.Visible = false;
+                this.dgvRobots.Columns[0].Visible = false;
+                this.dgvRobots.Columns[1].HeaderText = "Material";
+                this.dgvRobots.Columns[2].HeaderText = "Cantidad";
+                this.dgvRobots.Columns[3].Visible = false;
+                this.rtbInfoRobot.Visible = false;
             }
             dgvRobots.AutoResizeColumns();
         }
@@ -106,44 +104,59 @@ namespace FactoryForms {
         /// <param name="e"></param>
         private void dgvRobots_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             try {
-                if (robotsSelected) {
-                    rtbInfoRobot.Text = string.Empty;
-                    pbImageRobot.Visible = true;
-                    pbImageRobot.Image = null;
+                if (this.robotsSelected) {
+                    this.rtbInfoRobot.Text = string.Empty;
+                    this.pbImageRobot.Visible = true;
+                    this.pbImageRobot.Image = null;
                     Robot robot = dgvRobots.CurrentRow.DataBoundItem as Robot;
                     MyPlayer player = new MyPlayer();
                     player.Play($"Create{robot.Model}", false);
-                    rtbInfoRobot.Text = robot.Information();
-                    pbImageRobot.Image = Image.FromFile($"{systemImagePath}\\{robot.Model}.png");
+                    this.rtbInfoRobot.Text = robot.Information();
+                    this.pbImageRobot.Image = Image.FromFile($"{systemImagePath}\\{robot.Model}.png");
                 } else {
-                    pbImageRobot.Visible = false;
+                    this.pbImageRobot.Visible = false;
                 }
             } catch (Exception exe) {
                 frmLobby.FormExceptionHandler(exe);
             }
         }
 
+        /// <summary>
+        /// Updates the datagridView and its columns with a list of Robots.
+        /// </summary>
+        /// <param name="list"></param>
         private void UpdateDataGridRobot(List<Robot> list) {
             UpdateDataGridView(list.OrderBy(x => x.SerialNumber).ToList());
-            dgvRobots.Columns[0].HeaderText = "Serial N°";
-            dgvRobots.Columns[3].HeaderText = "For Ride";
-            dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
+            this.dgvRobots.Columns[0].HeaderText = "Serial N°";
+            this.dgvRobots.Columns[3].HeaderText = "For Ride";
+            this.dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
         }
 
+        /// <summary>
+        /// Updates the datagridView with a generic list.
+        /// </summary>
+        /// <typeparam name="T">List type T.</typeparam>
+        /// <param name="list">List of type T.</param>
         private void UpdateDataGridView<T>(List<T> list) {
-            dgvRobots.DataSource = null;
-            dgvRobots.DataSource = list;
+            this.dgvRobots.DataSource = null;
+            this.dgvRobots.DataSource = list;
         }
 
         #endregion
 
+        /// <summary>
+        /// Search into the list of robots, is exist at least one robot with the
+        /// name indicated by the user.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtSearch_TextChanged(object sender, EventArgs e) {
             List<Robot> robots = new List<Robot>();
-            if (robotsSelected) {
-                string search = this.txtSearch.Text;
+            if (this.robotsSelected) {
+                string search = this.txtSearch.Text.Trim().ToLower();
                 if (!String.IsNullOrWhiteSpace(search)) {
                     foreach (Robot item in RobotFactory.Robots) {
-                        if(item.Model.ToString() == search) {
+                        if(item.Model.ToString().ToLower() == search) {
                             robots.Add(item);
                         }
                     }

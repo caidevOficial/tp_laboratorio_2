@@ -36,12 +36,11 @@ namespace FactoryForms {
             this.pnlInfoRobot = new System.Windows.Forms.Panel();
             this.rtbInfoRobot = new System.Windows.Forms.RichTextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.ibtnSearch = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRobots)).BeginInit();
             this.pnlImageRobot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageRobot)).BeginInit();
             this.pnlInfoRobot.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRobots
@@ -148,29 +147,32 @@ namespace FactoryForms {
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.OrangeRed;
-            this.txtSearch.Location = new System.Drawing.Point(541, 12);
+            this.txtSearch.Location = new System.Drawing.Point(531, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(141, 35);
+            this.txtSearch.Size = new System.Drawing.Size(141, 38);
             this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // iconPictureBox1
+            // ibtnSearch
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.OrangeRed;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 35;
-            this.iconPictureBox1.Location = new System.Drawing.Point(494, 12);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(41, 35);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBox1.TabIndex = 8;
-            this.iconPictureBox1.TabStop = false;
+            this.ibtnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.ibtnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnSearch.ForeColor = System.Drawing.Color.OrangeRed;
+            this.ibtnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.ibtnSearch.IconColor = System.Drawing.Color.OrangeRed;
+            this.ibtnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnSearch.IconSize = 38;
+            this.ibtnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnSearch.Location = new System.Drawing.Point(424, 4);
+            this.ibtnSearch.Name = "ibtnSearch";
+            this.ibtnSearch.Size = new System.Drawing.Size(101, 38);
+            this.ibtnSearch.TabIndex = 9;
+            this.ibtnSearch.Text = "Search By Model";
+            this.ibtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ibtnSearch.UseVisualStyleBackColor = false;
             // 
             // frmWarehouse
             // 
@@ -180,7 +182,7 @@ namespace FactoryForms {
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(730, 499);
-            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.ibtnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.pnlInfoRobot);
             this.Controls.Add(this.pnlImageRobot);
@@ -198,7 +200,6 @@ namespace FactoryForms {
             this.pnlImageRobot.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImageRobot)).EndInit();
             this.pnlInfoRobot.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,6 +213,6 @@ namespace FactoryForms {
         private System.Windows.Forms.RichTextBox rtbInfoRobot;
         private System.Windows.Forms.PictureBox pbImageRobot;
         private System.Windows.Forms.TextBox txtSearch;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconButton ibtnSearch;
     }
 }

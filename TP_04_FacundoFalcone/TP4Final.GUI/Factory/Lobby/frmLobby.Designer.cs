@@ -385,6 +385,7 @@ namespace FactoryForms {
             // 
             // menuHome
             // 
+            this.menuHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.menuHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openDocumentToolStripMenuItem});
             this.menuHome.Location = new System.Drawing.Point(0, 0);
@@ -395,24 +396,30 @@ namespace FactoryForms {
             // 
             // openDocumentToolStripMenuItem
             // 
+            this.openDocumentToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.openDocumentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.XmlFileToolStripMenuItem,
             this.TxtFileToolStripMenuItem});
+            this.openDocumentToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.openDocumentToolStripMenuItem.Name = "openDocumentToolStripMenuItem";
             this.openDocumentToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.openDocumentToolStripMenuItem.Text = "Open File";
             // 
             // XmlFileToolStripMenuItem
             // 
+            this.XmlFileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.XmlFileToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.XmlFileToolStripMenuItem.Name = "XmlFileToolStripMenuItem";
-            this.XmlFileToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.XmlFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.XmlFileToolStripMenuItem.Text = "XML File";
             this.XmlFileToolStripMenuItem.Click += new System.EventHandler(this.XmlFileToolStripMenuItem_Click);
             // 
             // TxtFileToolStripMenuItem
             // 
+            this.TxtFileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.TxtFileToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.TxtFileToolStripMenuItem.Name = "TxtFileToolStripMenuItem";
-            this.TxtFileToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.TxtFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.TxtFileToolStripMenuItem.Text = "TXT File";
             this.TxtFileToolStripMenuItem.Click += new System.EventHandler(this.TxtFileToolStripMenuItem_Click_1);
             // 

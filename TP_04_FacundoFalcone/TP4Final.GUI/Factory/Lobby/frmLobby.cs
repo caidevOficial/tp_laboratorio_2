@@ -380,6 +380,11 @@ namespace FactoryForms {
 
         #endregion
 
+        /// <summary>
+        /// EventHandler of the XmlFile Tool
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void XmlFileToolStripMenuItem_Click(object sender, EventArgs e) {
             StringBuilder data = new StringBuilder();
             string file = string.Empty;
@@ -390,8 +395,9 @@ namespace FactoryForms {
                 file = openFile.FileName;
                 if (Path.GetExtension(file) == EXTENSION_XML) {
                     myList = new List<MaterialBucket>(serialManager.Read(file));
+                    data.AppendLine("----- Stock:");
                     foreach (MaterialBucket item in myList) {
-                        data.AppendLine(item.Information());
+                        data.Append($"--- {item.Information()}");
                     }
                     reports = new frmReports(data.ToString());
                     reports.ShowDialog();
@@ -401,6 +407,11 @@ namespace FactoryForms {
             }
         }
 
+        /// <summary>
+        /// EventHandler of the TxtFile Tool
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtFileToolStripMenuItem_Click_1(object sender, EventArgs e) {
             string text = string.Empty;
             string file = string.Empty;
