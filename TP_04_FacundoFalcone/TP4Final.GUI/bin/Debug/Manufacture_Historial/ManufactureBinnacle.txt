@@ -1,0 +1,348 @@
+24/6/2021 23:48:57 - Product: OptimusPrime
+Manufacture Batch: 530-641-772
+Manufacture Date: 24/6/2021 23:48:57
+
+-----------------------------
+
+24/6/2021 23:53:12 - Product: BladeLiger
+Manufacture Batch: 870-798-849
+Manufacture Date: 24/6/2021 23:53:12
+
+-----------------------------
+
+24/6/2021 23:53:21 - Product: DragonZord
+Manufacture Batch: 579-789-864
+Manufacture Date: 24/6/2021 23:53:21
+
+-----------------------------
+
+24/6/2021 23:53:35 - Product: C3PO
+Manufacture Batch: 776-804-808
+Manufacture Date: 24/6/2021 23:53:35
+
+-----------------------------
+
+25/6/2021 00:11:55 - Product: Megatron
+Manufacture Batch: 635-776-890
+Manufacture Date: 25/6/2021 00:11:55
+
+-----------------------------
+
+25/6/2021 00:12:04 - Product: T800
+Manufacture Batch: 609-515-729
+Manufacture Date: 25/6/2021 00:12:04
+
+-----------------------------
+
+25/6/2021 00:12:12 - Product: Mugendramon
+Manufacture Batch: 784-635-718
+Manufacture Date: 25/6/2021 00:12:12
+
+-----------------------------
+
+25/6/2021 00:12:20 - Product: C3PO
+Manufacture Batch: 723-858-739
+Manufacture Date: 25/6/2021 00:12:20
+
+-----------------------------
+
+25/6/2021 00:12:27 - Product: WallE
+Manufacture Batch: 764-508-517
+Manufacture Date: 25/6/2021 00:12:27
+
+-----------------------------
+
+25/6/2021 00:12:37 - Product: OptimusPrime
+Manufacture Batch: 559-783-730
+Manufacture Date: 25/6/2021 00:12:37
+
+-----------------------------
+
+25/6/2021 00:12:44 - Product: BladeLiger
+Manufacture Batch: 770-890-672
+Manufacture Date: 25/6/2021 00:12:44
+
+-----------------------------
+
+25/6/2021 00:12:52 - Product: BladeLiger
+Manufacture Batch: 854-773-732
+Manufacture Date: 25/6/2021 00:12:52
+
+-----------------------------
+
+25/6/2021 00:13:11 - Product: Eva01
+Manufacture Batch: 607-844-824
+Manufacture Date: 25/6/2021 00:13:11
+
+-----------------------------
+
+25/6/2021 00:13:26 - Product: T800
+Manufacture Batch: 774-717-746
+Manufacture Date: 25/6/2021 00:13:26
+
+-----------------------------
+
+25/6/2021 00:13:33 - Product: T800
+Manufacture Batch: 550-618-701
+Manufacture Date: 25/6/2021 00:13:33
+
+-----------------------------
+
+25/6/2021 00:13:46 - Product: WallE
+Manufacture Batch: 784-802-563
+Manufacture Date: 25/6/2021 00:13:46
+
+-----------------------------
+
+25/6/2021 00:13:54 - Product: WallE
+Manufacture Batch: 559-522-552
+Manufacture Date: 25/6/2021 00:13:54
+
+-----------------------------
+
+25/6/2021 00:14:02 - Product: WallE
+Manufacture Batch: 541-578-855
+Manufacture Date: 25/6/2021 00:14:02
+
+-----------------------------
+
+26/6/2021 00:26:56 - Product: BladeLiger
+Manufacture Batch: 877-735-594
+Manufacture Date: 26/6/2021 00:26:56
+
+-----------------------------
+
+26/6/2021 00:27:04 - Product: Eva01
+Manufacture Batch: 681-707-838
+Manufacture Date: 26/6/2021 00:27:04
+
+-----------------------------
+
+26/6/2021 00:27:24 - Product: T800
+Manufacture Batch: 690-610-689
+Manufacture Date: 26/6/2021 00:27:24
+
+-----------------------------
+
+26/6/2021 00:27:36 - Product: T800
+Manufacture Batch: 802-813-569
+Manufacture Date: 26/6/2021 00:27:36
+
+-----------------------------
+
+26/6/2021 00:27:44 - Product: T800
+Manufacture Batch: 699-803-707
+Manufacture Date: 26/6/2021 00:27:44
+
+-----------------------------
+
+26/6/2021 00:27:54 - Product: C3PO
+Manufacture Batch: 886-543-823
+Manufacture Date: 26/6/2021 00:27:54
+
+-----------------------------
+
+26/6/2021 00:28:02 - Product: C3PO
+Manufacture Batch: 682-888-770
+Manufacture Date: 26/6/2021 00:28:02
+
+-----------------------------
+
+26/6/2021 00:28:25 - Product: OptimusPrime
+Manufacture Batch: 617-747-584
+Manufacture Date: 26/6/2021 00:28:25
+
+-----------------------------
+
+26/6/2021 00:28:32 - Product: Megatron
+Manufacture Batch: 536-744-647
+Manufacture Date: 26/6/2021 00:28:32
+
+-----------------------------
+
+26/6/2021 00:28:40 - Product: Megatron
+Manufacture Batch: 532-780-577
+Manufacture Date: 26/6/2021 00:28:40
+
+-----------------------------
+
+26/6/2021 00:28:48 - Product: Megatron
+Manufacture Batch: 629-862-699
+Manufacture Date: 26/6/2021 00:28:48
+
+-----------------------------
+
+26/6/2021 00:29:04 - Product: C3PO
+Manufacture Batch: 773-657-563
+Manufacture Date: 26/6/2021 00:29:04
+
+-----------------------------
+
+26/6/2021 00:29:14 - Product: WallE
+Manufacture Batch: 846-771-859
+Manufacture Date: 26/6/2021 00:29:14
+
+-----------------------------
+
+26/6/2021 00:29:25 - Product: WallE
+Manufacture Batch: 653-555-567
+Manufacture Date: 26/6/2021 00:29:25
+
+-----------------------------
+
+26/6/2021 00:29:35 - Product: WallE
+Manufacture Batch: 876-500-668
+Manufacture Date: 26/6/2021 00:29:35
+
+-----------------------------
+
+26/6/2021 00:29:59 - Product: Eva01
+Manufacture Batch: 687-525-800
+Manufacture Date: 26/6/2021 00:29:59
+
+-----------------------------
+
+26/6/2021 00:30:07 - Product: Mugendramon
+Manufacture Batch: 692-588-626
+Manufacture Date: 26/6/2021 00:30:07
+
+-----------------------------
+
+26/6/2021 00:30:15 - Product: DragonZord
+Manufacture Batch: 553-773-779
+Manufacture Date: 26/6/2021 00:30:14
+
+-----------------------------
+
+26/6/2021 00:30:31 - Product: T800
+Manufacture Batch: 774-825-545
+Manufacture Date: 26/6/2021 00:30:31
+
+-----------------------------
+
+26/6/2021 00:30:40 - Product: T800
+Manufacture Batch: 611-532-640
+Manufacture Date: 26/6/2021 00:30:40
+
+-----------------------------
+
+26/6/2021 00:30:52 - Product: T800
+Manufacture Batch: 618-736-597
+Manufacture Date: 26/6/2021 00:30:52
+
+-----------------------------
+
+26/6/2021 00:32:03 - Product: C3PO
+Manufacture Batch: 797-670-847
+Manufacture Date: 26/6/2021 00:32:03
+
+-----------------------------
+
+26/6/2021 00:32:14 - Product: C3PO
+Manufacture Batch: 797-518-642
+Manufacture Date: 26/6/2021 00:32:14
+
+-----------------------------
+
+26/6/2021 00:33:52 - Product: C3PO
+Manufacture Batch: 754-811-768
+Manufacture Date: 26/6/2021 00:33:52
+
+-----------------------------
+
+26/6/2021 00:34:24 - Product: DragonZord
+Manufacture Batch: 541-757-705
+Manufacture Date: 26/6/2021 00:34:24
+
+-----------------------------
+
+26/6/2021 00:36:17 - Product: T800
+Manufacture Batch: 659-678-824
+Manufacture Date: 26/6/2021 00:36:17
+
+-----------------------------
+
+26/6/2021 00:36:29 - Product: T800
+Manufacture Batch: 887-798-721
+Manufacture Date: 26/6/2021 00:36:29
+
+-----------------------------
+
+26/6/2021 00:37:02 - Product: WallE
+Manufacture Batch: 659-582-664
+Manufacture Date: 26/6/2021 00:37:02
+
+-----------------------------
+
+4/7/2021 02:42:04 - Product: DragonZord
+Manufacture Batch: 713-800-708
+Manufacture Date: 4/7/2021 02:42:04
+
+-----------------------------
+
+4/7/2021 03:07:18 - Product: DragonZord
+Manufacture Batch: 605-677-768
+Manufacture Date: 4/7/2021 03:07:18
+
+-----------------------------
+
+4/7/2021 03:57:58 - Product: WallE
+Manufacture Batch: 523-857-724
+Manufacture Date: 4/7/2021 03:57:57
+
+-----------------------------
+
+4/7/2021 04:53:05 - Product: OptimusPrime
+Manufacture Batch: 648-604-638
+Manufacture Date: 4/7/2021 04:53:05
+
+-----------------------------
+
+4/7/2021 04:55:35 - Product: DragonZord
+Manufacture Batch: 846-650-568
+Manufacture Date: 4/7/2021 04:55:35
+
+-----------------------------
+
+6/7/2021 01:14:46 - Product: WallE
+Manufacture Batch: 578-835-572
+Manufacture Date: 6/7/2021 01:14:46
+
+-----------------------------
+
+6/7/2021 01:14:55 - Product: WallE
+Manufacture Batch: 602-542-790
+Manufacture Date: 6/7/2021 01:14:55
+
+-----------------------------
+
+6/7/2021 01:15:03 - Product: DragonZord
+Manufacture Batch: 628-830-575
+Manufacture Date: 6/7/2021 01:15:03
+
+-----------------------------
+
+6/7/2021 01:18:07 - Product: Eva01
+Manufacture Batch: 509-524-550
+Manufacture Date: 6/7/2021 01:18:07
+
+-----------------------------
+
+6/7/2021 01:18:22 - Product: BladeLiger
+Manufacture Batch: 705-869-760
+Manufacture Date: 6/7/2021 01:18:22
+
+-----------------------------
+
+6/7/2021 01:18:40 - Product: Mugendramon
+Manufacture Batch: 680-527-526
+Manufacture Date: 6/7/2021 01:18:40
+
+-----------------------------
+
+6/7/2021 01:19:17 - Product: T800
+Manufacture Batch: 503-529-811
+Manufacture Date: 6/7/2021 01:19:17
+
+-----------------------------
+
