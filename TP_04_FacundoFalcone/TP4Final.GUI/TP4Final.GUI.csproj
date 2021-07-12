@@ -56,114 +56,114 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory\Advices\frmJoke.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmJoke.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Advices\frmJoke.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmJoke.Designer.cs">
       <DependentUpon>frmJoke.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Advices\frmShutdown.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmShutdown.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Advices\frmShutdown.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmShutdown.Designer.cs">
       <DependentUpon>frmShutdown.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Advices\frmException.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmException.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Advices\frmException.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmException.Designer.cs">
       <DependentUpon>frmException.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Dashboard\frmDashboard.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Dashboard\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Dashboard\frmDashboard.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Dashboard\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Advices\frmBuilding.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmBuilding.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Advices\frmBuilding.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmBuilding.Designer.cs">
       <DependentUpon>frmBuilding.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Lobby\frmLobby.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Lobby\frmLobby.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.Designer.cs">
       <DependentUpon>frmLobby.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\MachineRoom\frmMachineRoom.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.MachineRoom\frmMachineRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\MachineRoom\frmMachineRoom.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.MachineRoom\frmMachineRoom.Designer.cs">
       <DependentUpon>frmMachineRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Manufacture\frmManufacture.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Manufacture\frmManufacture.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.Designer.cs">
       <DependentUpon>frmManufacture.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Reports\frmReports.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Reports\frmReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Reports\frmReports.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Reports\frmReports.Designer.cs">
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Warehouse\frmWarehouse.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Warehouse\frmWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Warehouse\frmWarehouse.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Warehouse\frmWarehouse.Designer.cs">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Advices\frmISOCertified.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmISOCertified.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Advices\frmISOCertified.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmISOCertified.Designer.cs">
       <DependentUpon>frmISOCertified.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\Lobby\frmOpening.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmOpening.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factory\Lobby\frmOpening.Designer.cs">
+    <Compile Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmOpening.Designer.cs">
       <DependentUpon>frmOpening.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Factory\Advices\frmJoke.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmJoke.resx">
       <DependentUpon>frmJoke.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Advices\frmShutdown.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmShutdown.resx">
       <DependentUpon>frmShutdown.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Advices\frmException.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmException.resx">
       <DependentUpon>frmException.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Dashboard\frmDashboard.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Dashboard\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Advices\frmBuilding.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmBuilding.resx">
       <DependentUpon>frmBuilding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Lobby\frmLobby.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.resx">
       <DependentUpon>frmLobby.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\MachineRoom\frmMachineRoom.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.MachineRoom\frmMachineRoom.resx">
       <DependentUpon>frmMachineRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Manufacture\frmManufacture.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.resx">
       <DependentUpon>frmManufacture.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Reports\frmReports.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Reports\frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Warehouse\frmWarehouse.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Warehouse\frmWarehouse.resx">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Advices\frmISOCertified.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Advices\frmISOCertified.resx">
       <DependentUpon>frmISOCertified.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factory\Lobby\frmOpening.resx">
+    <EmbeddedResource Include="TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmOpening.resx">
       <DependentUpon>frmOpening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -197,6 +197,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Images\Logo_Robot_Head.gif" />
     <Content Include="LogoRobot.ico" />
     <None Include="Resources\H_15.png" />
     <None Include="Resources\H_14.png" />
@@ -213,21 +214,6 @@
     <None Include="Resources\H_3.png" />
     <None Include="Resources\H_2.png" />
     <None Include="Resources\H_1.png" />
-    <None Include="Resources\15.png" />
-    <None Include="Resources\14.png" />
-    <None Include="Resources\13.png" />
-    <None Include="Resources\12.png" />
-    <None Include="Resources\11.png" />
-    <None Include="Resources\10.png" />
-    <None Include="Resources\9.png" />
-    <None Include="Resources\8.png" />
-    <None Include="Resources\7.png" />
-    <None Include="Resources\6.png" />
-    <None Include="Resources\5.png" />
-    <None Include="Resources\4.png" />
-    <None Include="Resources\3.png" />
-    <None Include="Resources\2.png" />
-    <None Include="Resources\1.png" />
     <None Include="Resources\Horse.gif" />
     <None Include="Resources\Logo_Robot_Head.gif" />
   </ItemGroup>

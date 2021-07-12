@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
+using System.Collections.Generic;
 using Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models;
-using System.Collections.Generic;
 
 namespace UnitTestProjectTPFinal {
 
