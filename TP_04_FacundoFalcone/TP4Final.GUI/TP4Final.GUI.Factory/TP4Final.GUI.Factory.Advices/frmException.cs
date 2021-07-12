@@ -95,7 +95,7 @@ namespace FactoryForms {
             rtbExceptionMsg.Text = $"Exception:\n{formEx.Message}";
             tm.SaveFull(path, filename, formEx.ToString());
             MyPlayer player = new MyPlayer();
-            player.Play("ExceptionForm", false);
+            player.Play("ExceptionForm");
         }
 
         #endregion

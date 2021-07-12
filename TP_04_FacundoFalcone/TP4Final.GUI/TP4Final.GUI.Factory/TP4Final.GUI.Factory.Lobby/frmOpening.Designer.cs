@@ -73,7 +73,6 @@ namespace FactoryForms {
             // 
             this.pbBackImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbBackImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbBackImage.Image = global::FactoryForms.Properties.Resources.Logo_Robot_Head;
             this.pbBackImage.Location = new System.Drawing.Point(0, 0);
             this.pbBackImage.Name = "pbBackImage";
             this.pbBackImage.Size = new System.Drawing.Size(553, 493);
@@ -139,6 +138,7 @@ namespace FactoryForms {
             this.pnlProgressBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

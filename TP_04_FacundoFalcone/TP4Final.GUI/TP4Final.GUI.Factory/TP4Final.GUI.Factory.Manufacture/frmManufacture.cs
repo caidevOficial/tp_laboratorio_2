@@ -59,7 +59,7 @@ namespace FactoryForms {
         /// </summary>
         private void ShowFormBuildingWithSound() {
             MyPlayer player = new MyPlayer();
-            player.Play($"BuildingForm", false);
+            player.Play("BuildingForm");
             frmLobby.FormShowDialogHandler(new frmBuilding());
         }
 
@@ -69,7 +69,7 @@ namespace FactoryForms {
         /// <param name="prototype">Robot to extract its data.</param>
         private void ShowFormISOWithSound(Robot prototype) {
             MyPlayer player = new MyPlayer();
-            player.Play($"Create{prototype.Model}", false);
+            player.Play($"Create{prototype.Model}");
             frmLobby.FormShowDialogHandler(new frmISOCertified(prototype.Model.ToString()));
         }
 
@@ -79,7 +79,6 @@ namespace FactoryForms {
         /// <param name="metalType">Type Of metal of the robot.</param>
         /// <param name="origin">Origin of the robot.</param>
         /// <param name="modelName">Model name of the robot.</param>
-        /// <param name="amountOfMaterials">Amount of materials that needs the robot.</param>
         /// <param name="amountHead">Amount of heads of the robot.</param>
         /// <param name="amounTorso">Amount of torsos of the robot.</param>
         /// <param name="amountArms">Amount of arms of the robot.</param>

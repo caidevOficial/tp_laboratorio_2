@@ -46,7 +46,7 @@ namespace FactoryForms {
         /// Creates the form.
         /// </summary>
         public frmWarehouse() {
-            InitializeComponent();
+            this.InitializeComponent();
             this.robotsSelected = true;
         }
 
@@ -62,6 +62,7 @@ namespace FactoryForms {
         private void frmWarehouse_Load(object sender, EventArgs e) {
             this.rtbInfoRobot.Visible = false;
             this.cmbWarehouseShow.DataSource = new List<string>() { "Robots", "Materials" };
+            this.dgvRobots.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         #endregion
@@ -80,21 +81,20 @@ namespace FactoryForms {
                 this.rtbInfoRobot.Visible = robotsSelected;
                 this.txtSearch.Visible = true;
                 this.ibtnSearch.Visible = true;
-                //paso lista ordenada por un valor en concreto
-                UpdateDataGridRobot(RobotFactory.Robots);
+                this.UpdateDataGridRobot(RobotFactory.Robots);
 
             } else if (cmbWarehouseShow.SelectedItem.ToString() == "Materials") {
                 this.robotsSelected = false;
                 this.txtSearch.Visible = false;
                 this.ibtnSearch.Visible = false;
-                UpdateDataGridView(RobotFactory.Buckets);
+                this.UpdateDataGridView(RobotFactory.Buckets);
                 this.dgvRobots.Columns[0].Visible = false;
                 this.dgvRobots.Columns[1].HeaderText = "Material";
                 this.dgvRobots.Columns[2].HeaderText = "Cantidad";
                 this.dgvRobots.Columns[3].Visible = false;
                 this.rtbInfoRobot.Visible = false;
             }
-            dgvRobots.AutoResizeColumns();
+            this.dgvRobots.AutoResizeColumns();
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace FactoryForms {
                     this.pbImageRobot.Image = null;
                     Robot robot = dgvRobots.CurrentRow.DataBoundItem as Robot;
                     MyPlayer player = new MyPlayer();
-                    player.Play($"Create{robot.Model}", false);
+                    player.Play($"Create{robot.Model}");
                     this.rtbInfoRobot.Text = robot.Information();
                     this.pbImageRobot.Image = Image.FromFile($"{systemImagePath}\\{robot.Model}.png");
                 } else {
@@ -126,7 +126,7 @@ namespace FactoryForms {
         /// </summary>
         /// <param name="list"></param>
         private void UpdateDataGridRobot(List<Robot> list) {
-            UpdateDataGridView(list.OrderBy(x => x.SerialNumber).ToList());
+            this.UpdateDataGridView(list.OrderBy(x => x.SerialNumber).ToList());
             this.dgvRobots.Columns[0].HeaderText = "Serial N°";
             this.dgvRobots.Columns[3].HeaderText = "For Ride";
             this.dgvRobots.Columns[dgvRobots.Columns.Count - 1].HeaderText = "Pieces";
@@ -163,9 +163,9 @@ namespace FactoryForms {
                             robots.Add(item);
                         }
                     }
-                    UpdateDataGridRobot(robots);
+                    this.UpdateDataGridRobot(robots);
                 } else {
-                    UpdateDataGridRobot(RobotFactory.Robots);
+                    this.UpdateDataGridRobot(RobotFactory.Robots);
                 }
             }
         }

@@ -197,6 +197,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Images\Logo_Robot_Head.gif" />
     <Content Include="LogoRobot.ico" />
     <None Include="Resources\H_15.png" />
     <None Include="Resources\H_14.png" />

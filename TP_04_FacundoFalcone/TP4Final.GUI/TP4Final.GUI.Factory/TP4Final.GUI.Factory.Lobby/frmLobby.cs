@@ -26,6 +26,7 @@ using DAO;
 using FontAwesome.Sharp;
 using Materials;
 using Models;
+
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -40,21 +41,25 @@ namespace FactoryForms {
 
         #region Attributes
 
-        //private event SoundPlayerHandler myDelPlayer;
-        //private Thread myPlayerThread;
+        private const string TXTFILTER = "txt files(*.txt)|*.txt";
+        private const string XMLFILTER = "xml files(*.xml)|*.xml";
+        private const string BINFILTER = "bin files(*.bin)|*.bin";
         private const string EXTENSION_XML = ".xml";
         private const string EXTENSION_TXT = ".txt";
-        private frmReports reports;
+        private const string EXTENSION_BIN = ".bin";
+        private MyPlayer myDelPlayer;
         private OpenFileDialog openFile;
-        private Form activeForm;
-        private Panel leftBorderBtn;
         private IconButton currentBtn;
+        private Panel leftBorderBtn;
+        private Form activeForm;
+        private frmReports reports;
         private static frmException formEx;
         private static frmShutdown formShut;
+        private TextManager textManager;
+        private BinaryManager binManager;
         private static SerialManager<List<Robot>> smr;
         private static SerialManager<List<MaterialBucket>> smb;
         private SerialManager<List<MaterialBucket>> serialManager;
-        private TextManager textManager;
         private static List<Thread> threads;
         private static readonly string frmDashboardSound = "DashboardForm";
         private static readonly string frmWarehouseSound = "WarehouseForm";
@@ -96,12 +101,42 @@ namespace FactoryForms {
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            //myDelPlayer += MyPlayerMainMusic;
+            myDelPlayer = new MyPlayer();
+            myDelPlayer.ESoundPlayer += MyPlayerMainMusic;
             threads = new List<Thread>();
             smr = new SerialManager<List<Robot>>();
             smb = new SerialManager<List<MaterialBucket>>();
             serialManager = new SerialManager<List<MaterialBucket>>();
             textManager = new TextManager();
+            binManager = new BinaryManager();
+        }
+
+        #endregion
+
+        #region MusicPlayer
+
+        /// <summary>
+        /// Plays a sound in another thread.
+        /// </summary>
+        /// <param name="musicName">Name of the</param>
+        private void PlayMusic(string musicName) {
+            Thread playerThread = new Thread(new ParameterizedThreadStart(this.MyPlayerMainMusic));
+            playerThread.Start(musicName);
+            threads.Add(playerThread);
+        }
+
+        /// <summary>
+        /// Creates a soundPlayer and plays the sound.
+        /// </summary>
+        /// <param name="soundName">Name of the sound to play.</param>
+        private void MyPlayerMainMusic(object soundName) {
+            if (this.InvokeRequired) {
+                SoundPlayerHandler sp = new SoundPlayerHandler(MyPlayerMainMusic);
+                this.BeginInvoke(sp, new object[] { (string)soundName});
+            } else {
+                MyPlayer player = new MyPlayer();
+                player.Play((string)soundName);
+            }
         }
 
         #endregion
@@ -166,16 +201,7 @@ namespace FactoryForms {
             lblDate.Text = DateTime.Now.ToLongDateString();
         }
 
-
-        //private void MyPlayerMainMusic(object soundName) {
-        //    if (this.InvokeRequired) {
-        //        SoundPlayerHandler sp = new SoundPlayerHandler(MyPlayerMainMusic);
-        //        this.BeginInvoke(sp);
-        //    } else {
-        //        MyPlayer player = new MyPlayer();
-        //        player.Play((string)soundName,false);
-        //    }
-        //}
+        
 
         /// <summary>
         /// Load Event Handler
@@ -185,12 +211,8 @@ namespace FactoryForms {
         private void frmLobby_Load(object sender, EventArgs e) {
             frmOpening opening = new frmOpening();
             opening.ShowDialog();
-            
-            //myPlayerThread = new Thread(new ParameterizedThreadStart(this.MyPlayerMainMusic));
-            //threads.Add(myPlayerThread);
-            //threads[threads.Count - 1].Start("MainTheme");
-            
-            //myPlayerThread.Start("MainTheme");
+
+            PlayMusic("MainTheme");
 
             try {
                 if (File.Exists(fullMpersistencePath)) {
@@ -269,8 +291,7 @@ namespace FactoryForms {
         private void btnMachineRoom_Click(object sender, EventArgs e) {
             try {
                 ActivateButton(sender, RRGBColors.color5);
-                MyPlayer player = new MyPlayer();
-                player.Play(frmMachineRoomSound, false);
+                this.PlayMusic(frmMachineRoomSound);
                 OpenChildForm(new frmFactory());
             } catch (Exception exe) {
                 FormExceptionHandler(exe);
@@ -285,8 +306,7 @@ namespace FactoryForms {
         private void btnWarehouse_Click(object sender, EventArgs e) {
             try {
                 ActivateButton(sender, RRGBColors.color4);
-                MyPlayer player = new MyPlayer();
-                player.Play(frmWarehouseSound, false);
+                this.PlayMusic(frmWarehouseSound);
                 OpenChildForm(new frmWarehouse());
             } catch (Exception exe) {
                 FormExceptionHandler(exe);
@@ -301,8 +321,7 @@ namespace FactoryForms {
         private void btnManufacture_Click(object sender, EventArgs e) {
             try {
                 ActivateButton(sender, RRGBColors.color6);
-                MyPlayer player = new MyPlayer();
-                player.Play(frmManufactureSound, false);
+                this.PlayMusic(frmManufactureSound);
                 OpenChildForm(new frmSelectModel());
             } catch (Exception exe) {
                 FormExceptionHandler(exe);
@@ -317,8 +336,7 @@ namespace FactoryForms {
         private void btnDashboard_Click(object sender, EventArgs e) {
             try {
                 ActivateButton(sender, RRGBColors.color1);
-                MyPlayer player = new MyPlayer();
-                player.Play(frmDashboardSound, false);
+                this.PlayMusic(frmDashboardSound);
                 OpenChildForm(new frmDashboard());
             } catch (Exception exe) {
                 FormExceptionHandler(exe);
@@ -340,18 +358,21 @@ namespace FactoryForms {
                 formShut = new frmShutdown();
                 formShut.ShowDialog();
                 
-                foreach (Thread item in threads) {
-                    if (item.IsAlive) {
-                        item.Abort();
-                    }
-                }
-                
-                //MyPlayer player = new MyPlayer();
-                //player.Stop();
-                
+                this.KillThreads();
                 this.Dispose();
             } else {
                 e.Cancel = true;
+            }
+        }
+
+        /// <summary>
+        /// Kills all possibly alive threads.
+        /// </summary>
+        private void KillThreads() {
+            foreach (Thread item in threads) {
+                if (item.IsAlive) {
+                    item.Abort();
+                }
             }
         }
 
@@ -371,7 +392,7 @@ namespace FactoryForms {
         /// <param name="e"></param>
         private void pbLogo_Click(object sender, EventArgs e) {
             this.Reset();
-            if(!(activeForm is null)) {
+            if (!(activeForm is null)) {
                 activeForm.Close();
             }
             frmJoke joke = new frmJoke();
@@ -387,23 +408,28 @@ namespace FactoryForms {
         /// <param name="e"></param>
         private void XmlFileToolStripMenuItem_Click(object sender, EventArgs e) {
             StringBuilder data = new StringBuilder();
-            string file = string.Empty;
+            string file;
             List<MaterialBucket> myList;
             openFile = new OpenFileDialog();
             openFile.InitialDirectory = persistencePath;
-            if (openFile.ShowDialog() == DialogResult.OK) {
-                file = openFile.FileName;
-                if (Path.GetExtension(file) == EXTENSION_XML) {
-                    myList = new List<MaterialBucket>(serialManager.Read(file));
-                    data.AppendLine("----- Stock:");
-                    foreach (MaterialBucket item in myList) {
-                        data.Append($"--- {item.Information()}");
+            openFile.Filter = XMLFILTER;
+            try {
+                if (openFile.ShowDialog() == DialogResult.OK) {
+                    file = openFile.FileName;
+                    if (Path.GetExtension(file) == EXTENSION_XML) {
+                        myList = new List<MaterialBucket>(serialManager.Read(file));
+                        data.AppendLine("----- Stock:");
+                        foreach (MaterialBucket item in myList) {
+                            data.Append($"--- {item.Information()}");
+                        }
+                        reports = new frmReports(data.ToString());
+                        reports.ShowDialog();
+                    } else {
+                        MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    reports = new frmReports(data.ToString());
-                    reports.ShowDialog();
-                } else {
-                    MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            } catch (Exception exe) {
+                frmLobby.FormExceptionHandler(exe);
             }
         }
 
@@ -413,19 +439,51 @@ namespace FactoryForms {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TxtFileToolStripMenuItem_Click_1(object sender, EventArgs e) {
-            string text = string.Empty;
-            string file = string.Empty;
+            string text;
+            string file;
             openFile = new OpenFileDialog();
             openFile.InitialDirectory = $"{systemPath}\\Manufacture_Historial";
-            if (openFile.ShowDialog() == DialogResult.OK) {
-                file = openFile.FileName;
-                if (Path.GetExtension(file) == EXTENSION_TXT) {
-                    text = textManager.Read(file);
-                    reports = new frmReports(text);
-                    reports.ShowDialog();
-                } else {
-                    MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            openFile.Filter = TXTFILTER;
+            try {
+                if (openFile.ShowDialog() == DialogResult.OK) {
+                    file = openFile.FileName;
+                    if (Path.GetExtension(file) == EXTENSION_TXT) {
+                        text = textManager.Read(file);
+                        reports = new frmReports(text);
+                        reports.ShowDialog();
+                    } else {
+                        MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+            } catch (Exception exe) {
+                frmLobby.FormExceptionHandler(exe);
+            }
+        }
+
+        /// <summary>
+        /// EventHandler of the BinFile Tool
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BinFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            string text;
+            string file;
+            openFile = new OpenFileDialog();
+            openFile.InitialDirectory = $"{systemPath}\\BinaryFile";
+            openFile.Filter = BINFILTER;
+            try {
+                if (openFile.ShowDialog() == DialogResult.OK) {
+                    file = openFile.FileName;
+                    if (Path.GetExtension(file) == EXTENSION_BIN) {
+                        text = binManager.Read(file);
+                        reports = new frmReports(text);
+                        reports.ShowDialog();
+                    } else {
+                        MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            } catch (Exception exe) {
+                frmLobby.FormExceptionHandler(exe);
             }
         }
     }

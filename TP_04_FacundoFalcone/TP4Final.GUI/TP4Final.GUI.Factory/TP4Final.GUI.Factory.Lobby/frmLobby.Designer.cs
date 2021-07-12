@@ -73,6 +73,7 @@ namespace FactoryForms {
             this.openDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.XmlFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TxtFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BinFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.pnlLogo.SuspendLayout();
@@ -399,7 +400,8 @@ namespace FactoryForms {
             this.openDocumentToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.openDocumentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.XmlFileToolStripMenuItem,
-            this.TxtFileToolStripMenuItem});
+            this.TxtFileToolStripMenuItem,
+            this.BinFileToolStripMenuItem});
             this.openDocumentToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.openDocumentToolStripMenuItem.Name = "openDocumentToolStripMenuItem";
             this.openDocumentToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
@@ -422,6 +424,15 @@ namespace FactoryForms {
             this.TxtFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.TxtFileToolStripMenuItem.Text = "TXT File";
             this.TxtFileToolStripMenuItem.Click += new System.EventHandler(this.TxtFileToolStripMenuItem_Click_1);
+            // 
+            // BinFileToolStripMenuItem
+            // 
+            this.BinFileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.BinFileToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
+            this.BinFileToolStripMenuItem.Name = "BinFileToolStripMenuItem";
+            this.BinFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.BinFileToolStripMenuItem.Text = "BIN File";
+            this.BinFileToolStripMenuItem.Click += new System.EventHandler(this.BinFileToolStripMenuItem_Click);
             // 
             // frmLobby
             // 
@@ -483,5 +494,6 @@ namespace FactoryForms {
         private System.Windows.Forms.ToolStripMenuItem openDocumentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem XmlFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TxtFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BinFileToolStripMenuItem;
     }
 }

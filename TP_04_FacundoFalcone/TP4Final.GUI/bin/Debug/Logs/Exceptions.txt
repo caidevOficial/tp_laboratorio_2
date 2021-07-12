@@ -283,3 +283,79 @@
    en FactoryForms.frmSelectModel.btnEva01_Click(Object sender, EventArgs e) en E:\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 242
 -----------------------------
 
+9/7/2021 02:01:12 - Exceptions.InsufficientMaterialsException: Insufficients Materials to build this model of robot, you need to import more materials in the machine room or choose another model.
+   en FactoryForms.frmSelectModel.ConfigureRobotForBuild(EMetalType metalType, EOrigin origin, EModelName modelName, Int32 amountHead, Int32 amounTorso, Int32 amountArms, Int32 amountLegs, Int32 amountTail, Boolean isRidable) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 120
+   en FactoryForms.frmSelectModel.btnDragonZord_Click(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 227
+-----------------------------
+
+12/7/2021 01:10:53 - System.Exception: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ... ---> System.Runtime.Serialization.SerializationException: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ...
+   en System.Runtime.Serialization.Formatters.Binary.SerializationHeaderRecord.Read(__BinaryParser input)
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.ReadSerializationHeaderRecord()
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   en System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   en Models.BinaryManager`1.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 45
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en Models.BinaryManager`1.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 48
+   en Models.Robot.LoadBioFile(String path) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\Robot.cs:línea 224
+   en Models.RobotFactory.ChargeBiography(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\RobotFactory.cs:línea 337
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.cs:línea 225
+-----------------------------
+
+12/7/2021 01:21:15 - System.Exception: Acceso denegado a la ruta de acceso 'F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\bin\Debug\Bio\DragonZord.bin'. ---> System.UnauthorizedAccessException: Acceso denegado a la ruta de acceso 'F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\bin\Debug\Bio\DragonZord.bin'.
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   en System.IO.FileStream..ctor(String path, FileMode mode)
+   en Models.BinaryManager`1.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 43
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en Models.BinaryManager`1.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 48
+   en Models.Robot.LoadBioFile(String path) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\Robot.cs:línea 224
+   en Models.RobotFactory.ChargeBiography(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\RobotFactory.cs:línea 337
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.cs:línea 225
+-----------------------------
+
+12/7/2021 01:22:15 - System.Exception: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ... ---> System.Runtime.Serialization.SerializationException: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ...
+   en System.Runtime.Serialization.Formatters.Binary.SerializationHeaderRecord.Read(__BinaryParser input)
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.ReadSerializationHeaderRecord()
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   en System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   en Models.BinaryManager`1.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 45
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en Models.BinaryManager`1.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 48
+   en Models.Robot.LoadBioFile(String path) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\Robot.cs:línea 224
+   en Models.RobotFactory.ChargeBiography(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\RobotFactory.cs:línea 337
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.cs:línea 225
+-----------------------------
+
+12/7/2021 01:29:30 - System.Exception: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ... ---> System.Runtime.Serialization.SerializationException: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ...
+   en System.Runtime.Serialization.Formatters.Binary.SerializationHeaderRecord.Read(__BinaryParser input)
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.ReadSerializationHeaderRecord()
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   en System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   en Models.BinaryManager.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 45
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en Models.BinaryManager.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 48
+   en Models.Robot.LoadBioFile(String path) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\Robot.cs:línea 224
+   en Models.RobotFactory.ChargeBiography(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\RobotFactory.cs:línea 337
+   en FactoryForms.frmLobby.frmLobby_Load(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.cs:línea 225
+-----------------------------
+
+12/7/2021 01:44:08 - System.Exception: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ... ---> System.Runtime.Serialization.SerializationException: El flujo de entrada no tiene un formato binario válido. Los contenidos iniciales (en bytes) son: 54-68-65-20-64-72-61-67-6F-6E-7A-6F-72-64-20-6C-69 ...
+   en System.Runtime.Serialization.Formatters.Binary.SerializationHeaderRecord.Read(__BinaryParser input)
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.ReadSerializationHeaderRecord()
+   en System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   en System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   en System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   en Models.BinaryManager.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 45
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en Models.BinaryManager.Read(String filePath) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.Models\TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs:línea 48
+   en FactoryForms.frmLobby.BinFileToolStripMenuItem_Click(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.cs:línea 473
+-----------------------------
+

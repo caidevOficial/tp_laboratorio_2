@@ -448,3 +448,9 @@ Manufacture Date: 6/7/2021 14:08:49
 
 -----------------------------
 
+9/7/2021 02:01:41 - Product: DragonZord
+Manufacture Batch: 773-715-765
+Manufacture Date: 9/7/2021 02:01:41
+
+-----------------------------
+

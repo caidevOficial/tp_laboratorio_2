@@ -44,31 +44,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\DAO.Layer\DataAccessManager.cs" />
-    <Compile Include="Classes\DAO.Layer\DatabaseManager.cs" />
-    <Compile Include="Classes\DAO.Layer\DataConnectorAbstract.cs" />
-    <Compile Include="Classes\Exceptions\FactoryConnectionErrorException.cs" />
-    <Compile Include="Classes\Exceptions\InsufficientMaterialsException.cs" />
-    <Compile Include="Classes\Exceptions\NoSoundFoundException.cs" />
-    <Compile Include="Classes\Exceptions\QualityControlFailedException.cs" />
-    <Compile Include="Classes\Interfaces\IBiographyManager.cs" />
-    <Compile Include="Classes\Interfaces\IFilesManager.cs" />
-    <Compile Include="Classes\Interfaces\IInformation.cs" />
-    <Compile Include="Classes\Interfaces\ICloning.cs" />
-    <Compile Include="Classes\Robot.cs" />
-    <Compile Include="Classes\Extension\RobotExtension.cs" />
-    <Compile Include="Classes\RobotFactory.cs" />
-    <Compile Include="Classes\SubClasses\MaterialBucket.cs" />
-    <Compile Include="Classes\SuperClasses\Product.cs" />
-    <Compile Include="Classes\RobotPiece.cs" />
-    <Compile Include="Enums\EPieceType.cs" />
-    <Compile Include="Enums\EModelName.cs" />
-    <Compile Include="Enums\EMaterial.cs" />
-    <Compile Include="Enums\EOrigin.cs" />
-    <Compile Include="Classes\MyPlayer.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.DAO.Layer\DataAccessManager.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.DAO.Layer\DataConnectorAbstract.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Exceptions\FactoryConnectionErrorException.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Exceptions\InsufficientMaterialsException.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Exceptions\NoSoundFoundException.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Exceptions\QualityControlFailedException.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\BinaryManager.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Interfaces\IBiographyManager.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Interfaces\IFilesManager.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Interfaces\IInformation.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Interfaces\ICloning.cs" />
+    <Compile Include="TP4Final.Models.Classes\Robot.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.Extension\RobotExtension.cs" />
+    <Compile Include="TP4Final.Models.Classes\RobotFactory.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.SubClasses\MaterialBucket.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.SuperClasses\Product.cs" />
+    <Compile Include="TP4Final.Models.Classes\RobotPiece.cs" />
+    <Compile Include="Tp4Final.Models.Enums\EPieceType.cs" />
+    <Compile Include="Tp4Final.Models.Enums\EModelName.cs" />
+    <Compile Include="Tp4Final.Models.Enums\EMaterial.cs" />
+    <Compile Include="Tp4Final.Models.Enums\EOrigin.cs" />
+    <Compile Include="TP4Final.Models.Classes\MyPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\FilesManager\SerialManager.cs" />
-    <Compile Include="Classes\FilesManager\TextManager.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\SerialManager.cs" />
+    <Compile Include="TP4Final.Models.Classes\TP4Final.Models.Classes.FilesManager\TextManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams.cd" />

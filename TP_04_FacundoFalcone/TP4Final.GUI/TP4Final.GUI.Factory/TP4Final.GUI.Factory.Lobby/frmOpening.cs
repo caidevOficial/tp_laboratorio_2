@@ -74,7 +74,7 @@ namespace FactoryForms {
 
             try {
                 MyPlayer player = new MyPlayer();
-                player.Play("Opening", false);
+                player.Play("OpeningForm");
 
             } catch (Exception exe) {
                 frmLobby.FormExceptionHandler(exe);
@@ -101,7 +101,7 @@ namespace FactoryForms {
         /// <param name="path">Name of the file.</param>
         private void SetGifInPictureBox(object path) {
             string newPath = (string)path;
-            this.pbBackImage.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(newPath);
+            this.pbBackImage.Image = (Image)Properties.Resources.ResourceManager.GetObject(newPath);
         }
 
         /// <summary>

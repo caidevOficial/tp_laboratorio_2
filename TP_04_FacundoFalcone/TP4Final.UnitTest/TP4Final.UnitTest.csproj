@@ -52,7 +52,6 @@
     <Compile Include="RobotPiece\UnitTest_RobotPiece.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Product\UnitTest_Product.cs" />
-    <Compile Include="MyPlayer\UnitTest_MyPlayer.cs" />
     <Compile Include="MaterialBuckets\UnitTest_MaterialBucket.cs" />
     <Compile Include="RobotFactory\UnitTest_RobotFactory.cs" />
   </ItemGroup>
