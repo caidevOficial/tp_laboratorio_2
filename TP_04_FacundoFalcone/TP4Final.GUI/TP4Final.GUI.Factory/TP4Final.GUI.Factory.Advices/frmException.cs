@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-using Models;
 using System;
 using System.Windows.Forms;
+using Models;
 
 namespace FactoryForms {
     public partial class frmException : Form {

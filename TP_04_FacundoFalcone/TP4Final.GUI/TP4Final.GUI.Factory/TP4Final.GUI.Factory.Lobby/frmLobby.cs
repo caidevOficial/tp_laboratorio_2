@@ -22,11 +22,6 @@
  * SOFTWARE.
  */
 
-using DAO;
-using FontAwesome.Sharp;
-using Materials;
-using Models;
-
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -34,6 +29,10 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using DAO;
+using FontAwesome.Sharp;
+using Materials;
+using Models;
 
 namespace FactoryForms {
 
@@ -94,6 +93,8 @@ namespace FactoryForms {
         /// </summary>
         public frmLobby() {
             InitializeComponent();
+            myDelPlayer = new MyPlayer();
+            myDelPlayer.ESoundPlayer += MyPlayerMainMusic;
             activeForm = null;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 90);
@@ -101,8 +102,6 @@ namespace FactoryForms {
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            myDelPlayer = new MyPlayer();
-            myDelPlayer.ESoundPlayer += MyPlayerMainMusic;
             threads = new List<Thread>();
             smr = new SerialManager<List<Robot>>();
             smb = new SerialManager<List<MaterialBucket>>();
@@ -118,7 +117,7 @@ namespace FactoryForms {
         /// <summary>
         /// Plays a sound in another thread.
         /// </summary>
-        /// <param name="musicName">Name of the</param>
+        /// <param name="musicName">Name of the sound.</param>
         private void PlayMusic(string musicName) {
             Thread playerThread = new Thread(new ParameterizedThreadStart(this.MyPlayerMainMusic));
             playerThread.Start(musicName);
@@ -132,7 +131,7 @@ namespace FactoryForms {
         private void MyPlayerMainMusic(object soundName) {
             if (this.InvokeRequired) {
                 SoundPlayerHandler sp = new SoundPlayerHandler(MyPlayerMainMusic);
-                this.BeginInvoke(sp, new object[] { (string)soundName});
+                this.BeginInvoke(sp, new object[] { (string)soundName });
             } else {
                 MyPlayer player = new MyPlayer();
                 player.Play((string)soundName);
@@ -201,7 +200,7 @@ namespace FactoryForms {
             lblDate.Text = DateTime.Now.ToLongDateString();
         }
 
-        
+
 
         /// <summary>
         /// Load Event Handler
@@ -357,7 +356,7 @@ namespace FactoryForms {
                 RobotFactory.SaveDataOfFactory();
                 formShut = new frmShutdown();
                 formShut.ShowDialog();
-                
+                myDelPlayer.ESoundPlayer -= MyPlayerMainMusic;
                 this.KillThreads();
                 this.Dispose();
             } else {
@@ -425,7 +424,7 @@ namespace FactoryForms {
                         reports = new frmReports(data.ToString());
                         reports.ShowDialog();
                     } else {
-                        MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error opening the xml file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             } catch (Exception exe) {
@@ -452,7 +451,7 @@ namespace FactoryForms {
                         reports = new frmReports(text);
                         reports.ShowDialog();
                     } else {
-                        MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error opening the txt file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             } catch (Exception exe) {
@@ -479,7 +478,7 @@ namespace FactoryForms {
                         reports = new frmReports(text);
                         reports.ShowDialog();
                     } else {
-                        MessageBox.Show("Error opening the file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error opening the Bin file", "Invalid Extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             } catch (Exception exe) {

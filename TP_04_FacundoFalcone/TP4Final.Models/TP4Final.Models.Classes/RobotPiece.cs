@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
+using System.Collections.Generic;
+using System.Text;
 using Enums;
 using Interfaces;
 using Materials;
 using SuperClasses;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Models {
     public class RobotPiece : Product, IInformation {

@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
+using System;
 using Enums;
 using Exceptions;
 using Models;
-using System;
 
 namespace TestDeConsola {
     class Program {
@@ -89,7 +89,7 @@ namespace TestDeConsola {
             robotBuildDetails = wallE.Information();
             Console.WriteLine(robotBuildDetails);
             logger.SaveFull(buildHistoryPath, "Builds.txt", $"{robotBuildDetails}");
-            
+
             #endregion
 
             #region SegundoCasoDeTesteoFallido
@@ -124,7 +124,7 @@ namespace TestDeConsola {
             } catch (Exception im) {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(im.Message);
-                if(logger.SaveExceptionDetail(logsPath, "Exceptions.txt", im)) {
+                if (logger.SaveExceptionDetail(logsPath, "Exceptions.txt", im)) {
                     Console.WriteLine("A log file has been created.");
                 }
             }

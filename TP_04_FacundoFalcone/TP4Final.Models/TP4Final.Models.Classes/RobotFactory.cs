@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
-using Enums;
-using Materials;
-using SuperClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Enums;
+using Materials;
+using SuperClasses;
 
 namespace Models {
     public static class RobotFactory {
@@ -475,7 +475,7 @@ namespace Models {
         /// in a XML file.
         /// </summary>
         public static void SaveDataOfFactory() {
-            if(Buckets.Count > 0 || Robots.Count > 0) {
+            if (Buckets.Count > 0 || Robots.Count > 0) {
                 if (!Directory.Exists(persistencePath)) {
                     Directory.CreateDirectory(persistencePath);
                 }

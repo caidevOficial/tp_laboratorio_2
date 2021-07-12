@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
-using Materials;
-using Models;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Materials;
+using Models;
 
 namespace FactoryForms {
     public partial class frmDashboard : Form {

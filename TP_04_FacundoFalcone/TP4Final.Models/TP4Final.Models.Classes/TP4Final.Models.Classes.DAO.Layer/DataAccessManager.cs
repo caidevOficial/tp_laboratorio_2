@@ -22,17 +22,14 @@
  * SOFTWARE.
  */
 
-using Enums;
-using Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Enums;
 using Exceptions;
 using Materials;
+using Models;
 using SuperClasses;
 
 namespace DAO {
@@ -68,7 +65,7 @@ namespace DAO {
             try {
                 DataAccessManager.MyCommand.CommandText = "Select * from Robots";
                 DataAccessManager.MyConection.Open();
-                using(SqlDataReader myReader = DataAccessManager.MyCommand.ExecuteReader()) {
+                using (SqlDataReader myReader = DataAccessManager.MyCommand.ExecuteReader()) {
                     DataTable myDT = new DataTable();
                     myDT.Load(myReader);
                     foreach (DataRow item in myDT.Rows) {
@@ -162,7 +159,7 @@ namespace DAO {
             MaterialBucket myBucket = new MaterialBucket(myProduct, amount);
             myBucket.AssociatedPieceID = item["AssociatedPiece_id"].ToString();
             myBucket.AssociatedRobotSerial = Convert.ToInt32(item["AssociatedRobot_Serial"]);
-            
+
             return myBucket;
         }
 

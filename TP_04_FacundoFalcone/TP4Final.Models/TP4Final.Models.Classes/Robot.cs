@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
-using Enums;
-using Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Enums;
+using Interfaces;
 
 namespace Models {
 

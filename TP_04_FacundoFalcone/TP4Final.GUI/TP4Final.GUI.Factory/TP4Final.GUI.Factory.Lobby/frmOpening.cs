@@ -22,16 +22,16 @@
  * SOFTWARE.
  */
 
-using Models;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using Models;
 
 namespace FactoryForms {
 
-    public delegate void LoadGif(object path); 
+    public delegate void LoadGif(object path);
 
     public partial class frmOpening : Form {
 

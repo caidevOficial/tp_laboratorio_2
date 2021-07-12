@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
-using Enums;
-using Exceptions;
-using Models;
 using System;
 using System.Windows.Forms;
 using DAO;
+using Enums;
+using Exceptions;
+using Models;
 
 namespace FactoryForms {
     public partial class frmSelectModel : Form {

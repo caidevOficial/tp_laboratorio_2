@@ -454,3 +454,27 @@ Manufacture Date: 9/7/2021 02:01:41
 
 -----------------------------
 
+12/7/2021 02:56:35 - Product: BladeLiger
+Manufacture Batch: 856-517-842
+Manufacture Date: 12/7/2021 02:56:35
+
+-----------------------------
+
+12/7/2021 02:56:59 - Product: Eva01
+Manufacture Batch: 789-594-690
+Manufacture Date: 12/7/2021 02:56:59
+
+-----------------------------
+
+12/7/2021 02:57:07 - Product: BladeLiger
+Manufacture Batch: 606-765-595
+Manufacture Date: 12/7/2021 02:57:07
+
+-----------------------------
+
+12/7/2021 02:57:15 - Product: DragonZord
+Manufacture Batch: 890-556-672
+Manufacture Date: 12/7/2021 02:57:15
+
+-----------------------------
+

@@ -24,15 +24,16 @@
 
 using Enums;
 using Materials;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Models {
     public static class RobotExtension {
 
+        /// <summary>
+        /// Format a robot piece, bassed on the serial of the robot.
+        /// </summary>
+        /// <param name="piece">Class affected.</param>
+        /// <param name="robotSerial">Serial of the robot to use for format.</param>
+        /// <param name="indexPiece">Index of the piece to format its ID.</param>
         public static void FormatRobotPieceID(this RobotPiece piece, int robotSerial, int indexPiece) {
             string prefix = string.Empty;
             switch (piece.PieceType) {
@@ -65,7 +66,6 @@ namespace Models {
         public static void SetSerialNumber(this Robot thisRobot) {
             foreach (RobotPiece item in thisRobot.RobotPieces) {
                 item.AssociatedRobotSerial = thisRobot.SerialNumber;
-                //item.PieceID = $"{item.AssociatedRobotSerial.ToString()}-{thisRobot.RobotPieces.IndexOf(item)}";
                 item.FormatRobotPieceID(item.AssociatedRobotSerial, thisRobot.RobotPieces.IndexOf(item));
                 foreach (MaterialBucket itemBucket in item.RawMaterial) {
                     itemBucket.AssociatedRobotSerial = thisRobot.SerialNumber;

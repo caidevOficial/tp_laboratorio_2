@@ -359,3 +359,8 @@
    en FactoryForms.frmLobby.BinFileToolStripMenuItem_Click(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Lobby\frmLobby.cs:línea 473
 -----------------------------
 
+12/7/2021 02:57:19 - Exceptions.InsufficientMaterialsException: Insufficients Materials to build this model of robot, you need to import more materials in the machine room or choose another model.
+   en FactoryForms.frmSelectModel.ConfigureRobotForBuild(EMetalType metalType, EOrigin origin, EModelName modelName, Int32 amountHead, Int32 amounTorso, Int32 amountArms, Int32 amountLegs, Int32 amountTail, Boolean isRidable) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 119
+   en FactoryForms.frmSelectModel.btnMugendramon_Click(Object sender, EventArgs e) en F:\Datos\Git_UTN\GitHub\tp_laboratorio_2\TP_04_FacundoFalcone\TP4Final.GUI\TP4Final.GUI.Factory\TP4Final.GUI.Factory.Manufacture\frmManufacture.cs:línea 149
+-----------------------------
+

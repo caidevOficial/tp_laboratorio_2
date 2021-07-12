@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-using Interfaces;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Interfaces;
 
 namespace Models {
 

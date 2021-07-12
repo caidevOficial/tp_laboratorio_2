@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-using Exceptions;
 using System;
+using Exceptions;
 using WMPLib;
 
 namespace Models {

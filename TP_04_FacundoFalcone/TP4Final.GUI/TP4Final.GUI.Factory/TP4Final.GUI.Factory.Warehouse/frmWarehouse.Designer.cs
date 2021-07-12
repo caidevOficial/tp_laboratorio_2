@@ -80,7 +80,7 @@ namespace FactoryForms {
             this.dgvRobots.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRobots.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dgvRobots.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.dgvRobots.Location = new System.Drawing.Point(168, 59);
+            this.dgvRobots.Location = new System.Drawing.Point(137, 59);
             this.dgvRobots.Name = "dgvRobots";
             this.dgvRobots.ReadOnly = true;
             this.dgvRobots.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -98,7 +98,7 @@ namespace FactoryForms {
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.dgvRobots.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvRobots.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRobots.Size = new System.Drawing.Size(374, 128);
+            this.dgvRobots.Size = new System.Drawing.Size(471, 128);
             this.dgvRobots.TabIndex = 1;
             this.dgvRobots.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRobots_CellContentClick);
             // 

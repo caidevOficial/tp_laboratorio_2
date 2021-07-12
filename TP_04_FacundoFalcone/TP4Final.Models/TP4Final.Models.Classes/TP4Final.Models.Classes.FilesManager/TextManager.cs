@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-using Interfaces;
 using System;
 using System.IO;
 using System.Text;
+using Interfaces;
 
 namespace Models {
     public class TextManager : IFilesManager<string> {

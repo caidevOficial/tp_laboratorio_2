@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-using Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Models;
 
 namespace FactoryForms {
     public partial class frmWarehouse : Form {
@@ -158,7 +158,7 @@ namespace FactoryForms {
                 string search = this.txtSearch.Text.Trim().ToLower();
                 if (!String.IsNullOrWhiteSpace(search)) {
                     foreach (Robot item in RobotFactory.Robots) {
-                        if(item.Model.ToString().ToLower().Contains(search) ||
+                        if (item.Model.ToString().ToLower().Contains(search) ||
                             item.Origin.ToString().ToLower().Contains(search)) {
                             robots.Add(item);
                         }
