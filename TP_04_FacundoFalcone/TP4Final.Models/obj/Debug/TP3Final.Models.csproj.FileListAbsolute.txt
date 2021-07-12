@@ -1,0 +1,6 @@
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\TP3Final.Models\bin\Debug\Models.dll
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\TP3Final.Models\bin\Debug\Models.pdb
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\TP3Final.Models\obj\Debug\TP3Final.Models.csprojAssemblyReference.cache
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\TP3Final.Models\obj\Debug\TP3Final.Models.csproj.CoreCompileInputs.cache
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\TP3Final.Models\obj\Debug\Models.dll
+E:\Git_UTN\GitHub\tp_laboratorio_2\TP_03_FacundoFalcone\TP3Final.Models\obj\Debug\Models.pdb

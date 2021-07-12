@@ -1,0 +1,12 @@
+11/7/2021 18:35:14 - Fallo el control de calidad para el segundo robot: C3PO
+-----------------------------
+
+11/7/2021 18:52:50 - Fallo el control de calidad para el segundo robot: C3PO
+-----------------------------
+
+11/7/2021 18:52:57 - Fallo el control de calidad para el segundo robot: C3PO
+-----------------------------
+
+11/7/2021 18:53:01 - Fallo el control de calidad para el segundo robot: C3PO
+-----------------------------
+
